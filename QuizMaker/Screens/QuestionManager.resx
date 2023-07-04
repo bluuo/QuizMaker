@@ -117,4 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="materialButton3.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAATRJREFUeF7t2yFOBFEQBuFRoNZwIILGLtwIDRxhEyQYBFwEFIpzgBiqJ71iOoPB
+        0a8qacM+8/0JJJAwmZn9l+Z5vuCeuDvuLL88RoCvuW/u2GN+1D+wFR995se9A7qFj+7zSd9AXnFfC3fd
+        K3eaz3oGUHxoS+LzWc8Aig9tSXw+6xlA8aEtic9nPQMoPrSlF0582wCKD21JfD7rGUDxoS2Jz2c9Ayg+
+        tCXx+axnAC+5rT9dP3Mn+axvIN8X7rox8BHQt4W8bqgBxv4WiIDuua0fgv1/xz8G1BGAOgJQRwDqCEAd
+        AagjAHUEoI4A1BGAOgJQRwDqCEAdAagjAHUEoI4A1BGAOgJQRwDqCEAdAehv/zBxm0/6B3ZrhI/8eIwA
+        1xEO+dE4gT7nHrgbbpdfNjP7Y9P0A1PQOl2RNU6PAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="materialButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EQAACxEBf2RfkQAAATRJREFUeF7t2yFOBFEQBuFRoNZwIILGLtwIDRxhEyQYBFwEFIpzgBiqJ71iOoPB
+        0a8qacM+8/0JJJAwmZn9l+Z5vuCeuDvuLL88RoCvuW/u2GN+1D+wFR995se9A7qFj+7zSd9AXnFfC3fd
+        K3eaz3oGUHxoS+LzWc8Aig9tSXw+6xlA8aEtic9nPQMoPrSlF0582wCKD21JfD7rGUDxoS2Jz2c9Ayg+
+        tCXx+axnAC+5rT9dP3Mn+axvIN8X7rox8BHQt4W8bqgBxv4WiIDuua0fgv1/xz8G1BGAOgJQRwDqCEAd
+        AagjAHUEoI4A1BGAOgJQRwDqCEAdAagjAHUEoI4A1BGAOgJQRwDqCEAdAehv/zBxm0/6B3ZrhI/8eIwA
+        1xEO+dE4gT7nHrgbbpdfNjP7Y9P0A1PQOl2RNU6PAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="fragenDB1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="fragenTabelleBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>126, 17</value>
+  </metadata>
 </root>

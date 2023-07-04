@@ -45,5 +45,26 @@ namespace QuizMaker.Screens
         {
 
         }
+
+        private void ButtonAddQuestion_Click(object sender, EventArgs e)
+        {
+            FragenDB.FragenTabelleDataTable fragenDB = new FragenDB.FragenTabelleDataTable();
+            FragenDB.FragenTabelleRow newRow = fragenDB.NewFragenTabelleRow();
+
+            newRow.category = TextboxCategory.Text;
+            newRow.question = TextboxQuestion.Text;
+            newRow.correct_answer = TextboxCorrect.Text;
+            newRow.wrong_answer1 = TextboxWrong1.Text;
+            newRow.wrong_answer2 = TextboxWrong2.Text;
+            newRow.wrong_answer3 = TextboxWrong3.Text;
+
+            fragenDB.AddFragenTabelleRow(newRow);
+            fragenDB.AcceptChanges();
+        }
+
+        private void ListboxQuestions_SelectedIndexChanged(object sender, MaterialListBoxItem selectedItem)
+        {
+
+        }
     }
 }

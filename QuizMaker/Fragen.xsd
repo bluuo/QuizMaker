@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FragenDB" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FragenDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="FragenDB" msprop:Generator_DataSetName="FragenDB">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FragenTabelle" msprop:Generator_RowEvHandlerName="FragenTabelleRowChangeEventHandler" msprop:Generator_RowDeletedName="FragenTabelleRowDeleted" msprop:Generator_RowDeletingName="FragenTabelleRowDeleting" msprop:Generator_RowEvArgName="FragenTabelleRowChangeEvent" msprop:Generator_TablePropName="FragenTabelle" msprop:Generator_RowChangedName="FragenTabelleRowChanged" msprop:Generator_RowChangingName="FragenTabelleRowChanging" msprop:Generator_TableClassName="FragenTabelleDataTable" msprop:Generator_RowClassName="FragenTabelleRow" msprop:Generator_TableVarName="tableFragenTabelle" msprop:Generator_UserTableName="FragenTabelle">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="category" msprop:Generator_ColumnPropNameInRow="category" msprop:Generator_ColumnPropNameInTable="categoryColumn" msprop:Generator_ColumnVarNameInTable="columncategory" msprop:Generator_UserColumnName="category" type="xs:string" minOccurs="0" />
+              <xs:element name="question" msprop:Generator_ColumnPropNameInRow="question" msprop:Generator_ColumnPropNameInTable="questionColumn" msprop:Generator_ColumnVarNameInTable="columnquestion" msprop:Generator_UserColumnName="question" type="xs:string" minOccurs="0" />
+              <xs:element name="correct_answer" msprop:Generator_ColumnPropNameInRow="correct_answer" msprop:Generator_ColumnPropNameInTable="correct_answerColumn" msprop:Generator_ColumnVarNameInTable="columncorrect_answer" msprop:Generator_UserColumnName="correct_answer" type="xs:string" minOccurs="0" />
+              <xs:element name="wrong_answer1" msprop:Generator_ColumnPropNameInRow="wrong_answer1" msprop:Generator_ColumnPropNameInTable="wrong_answer1Column" msprop:Generator_ColumnVarNameInTable="columnwrong_answer1" msprop:Generator_UserColumnName="wrong_answer1" type="xs:string" minOccurs="0" />
+              <xs:element name="wrong_answer2" msprop:Generator_ColumnPropNameInRow="wrong_answer2" msprop:Generator_ColumnPropNameInTable="wrong_answer2Column" msprop:Generator_ColumnVarNameInTable="columnwrong_answer2" msprop:Generator_UserColumnName="wrong_answer2" type="xs:string" minOccurs="0" />
+              <xs:element name="wrong_answer3" msprop:Generator_ColumnPropNameInRow="wrong_answer3" msprop:Generator_ColumnPropNameInTable="wrong_answer3Column" msprop:Generator_ColumnVarNameInTable="columnwrong_answer3" msprop:Generator_UserColumnName="wrong_answer3" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FragenTabelle" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
