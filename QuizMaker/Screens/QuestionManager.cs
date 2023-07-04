@@ -9,14 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace QuizMaker
+namespace QuizMaker.Screens
 {
-    public partial class Menu : MaterialForm
+    public partial class QuestionManager : MaterialForm
     {
-
-
-        public Menu()
+        public QuestionManager()
         {
             InitializeComponent();
 
@@ -32,33 +31,19 @@ namespace QuizMaker
 
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void QuestionManager_Load(object sender, EventArgs e)
         {
+            TextboxCategory.AutoCompleteCustomSource.Add("Apple");
+            TextboxCategory.AutoCompleteCustomSource.Add("Banana");
+            TextboxCategory.AutoCompleteCustomSource.Add("Cherry");
+            TextboxCategory.AutoCompleteMode = AutoCompleteMode.Suggest;
+            TextboxCategory.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
         }
 
-        private void materialLabel1_Click(object sender, EventArgs e)
+        private void materialMultiLineTextBox21_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void ButtonStart_Click(object sender, EventArgs e)
-        {
-            Screens.PlayQuiz Quiz = new Screens.PlayQuiz();
-            Quiz.Show();
-            this.Visible = false;
-        }
-
-        private void ButtonExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void materialButton2_Click(object sender, EventArgs e)
-        {
-            Screens.QuestionManager Fragen = new Screens.QuestionManager();
-            Fragen.Show();
-            this.Visible = false;
         }
     }
 }

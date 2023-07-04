@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Screens\QuestionManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\QuestionManager.Designer.cs">
+      <DependentUpon>QuestionManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\PlayQuiz.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Screens\QuestionManager.resx">
+      <DependentUpon>QuestionManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\PlayQuiz.resx">
       <DependentUpon>PlayQuiz.cs</DependentUpon>
     </EmbeddedResource>
