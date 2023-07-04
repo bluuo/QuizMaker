@@ -50,15 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs">
+    <Compile Include="Screens\PlayQuiz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="Screens\PlayQuiz.Designer.cs">
+      <DependentUpon>PlayQuiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Screens\PlayQuiz.resx">
+      <DependentUpon>PlayQuiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
