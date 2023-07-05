@@ -33,5 +33,30 @@ namespace QuizMaker.Screens
         {
 
         }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Antwort3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Antwort2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Antwort1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Antwort4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

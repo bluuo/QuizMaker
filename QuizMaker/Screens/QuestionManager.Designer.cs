@@ -1,0 +1,451 @@
+﻿namespace QuizMaker.Screens
+{
+    partial class QuestionManager
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionManager));
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.ButtonAddQuestion = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.TextboxCorrect = new MaterialSkin.Controls.MaterialTextBox();
+            this.TextboxWrong1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.TextboxWrong2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.TextboxWrong3 = new MaterialSkin.Controls.MaterialTextBox();
+            this.TextboxQuestion = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.TextboxCategory = new System.Windows.Forms.TextBox();
+            this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            this.fragenDB1 = new QuizMaker.FragenDB();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fragenTabelleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.questionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correctanswerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wronganswer1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wronganswer2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wronganswer3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.fragenDB1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fragenTabelleBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(343, 186);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(41, 19);
+            this.materialLabel1.TabIndex = 2;
+            this.materialLabel1.Text = "Frage";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(343, 352);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(117, 19);
+            this.materialLabel2.TabIndex = 4;
+            this.materialLabel2.Text = "Richtige Antwort";
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.Location = new System.Drawing.Point(343, 433);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(115, 19);
+            this.materialLabel3.TabIndex = 6;
+            this.materialLabel3.Text = "Falsche Antwort";
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.Location = new System.Drawing.Point(343, 514);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(115, 19);
+            this.materialLabel4.TabIndex = 8;
+            this.materialLabel4.Text = "Falsche Antwort";
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.Location = new System.Drawing.Point(346, 595);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(115, 19);
+            this.materialLabel5.TabIndex = 10;
+            this.materialLabel5.Text = "Falsche Antwort";
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSize = false;
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(33, 671);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(278, 31);
+            this.materialButton1.TabIndex = 11;
+            this.materialButton1.Text = "Ausgewählte löschen";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            // 
+            // ButtonAddQuestion
+            // 
+            this.ButtonAddQuestion.AutoSize = false;
+            this.ButtonAddQuestion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ButtonAddQuestion.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.ButtonAddQuestion.Depth = 0;
+            this.ButtonAddQuestion.HighEmphasis = true;
+            this.ButtonAddQuestion.Icon = null;
+            this.ButtonAddQuestion.Location = new System.Drawing.Point(490, 671);
+            this.ButtonAddQuestion.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ButtonAddQuestion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ButtonAddQuestion.Name = "ButtonAddQuestion";
+            this.ButtonAddQuestion.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.ButtonAddQuestion.Size = new System.Drawing.Size(278, 31);
+            this.ButtonAddQuestion.TabIndex = 12;
+            this.ButtonAddQuestion.Text = "Frage hinzufügen";
+            this.ButtonAddQuestion.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.ButtonAddQuestion.UseAccentColor = false;
+            this.ButtonAddQuestion.UseVisualStyleBackColor = true;
+            this.ButtonAddQuestion.Click += new System.EventHandler(this.ButtonAddQuestion_Click);
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel6.Location = new System.Drawing.Point(343, 111);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(68, 19);
+            this.materialLabel6.TabIndex = 13;
+            this.materialLabel6.Text = "Kategorie";
+            // 
+            // TextboxCorrect
+            // 
+            this.TextboxCorrect.AnimateReadOnly = false;
+            this.TextboxCorrect.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextboxCorrect.Depth = 0;
+            this.TextboxCorrect.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TextboxCorrect.LeadingIcon = null;
+            this.TextboxCorrect.Location = new System.Drawing.Point(343, 380);
+            this.TextboxCorrect.MaxLength = 50;
+            this.TextboxCorrect.MouseState = MaterialSkin.MouseState.OUT;
+            this.TextboxCorrect.Multiline = false;
+            this.TextboxCorrect.Name = "TextboxCorrect";
+            this.TextboxCorrect.Size = new System.Drawing.Size(569, 50);
+            this.TextboxCorrect.TabIndex = 16;
+            this.TextboxCorrect.Text = "";
+            this.TextboxCorrect.TrailingIcon = null;
+            // 
+            // TextboxWrong1
+            // 
+            this.TextboxWrong1.AnimateReadOnly = false;
+            this.TextboxWrong1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextboxWrong1.Depth = 0;
+            this.TextboxWrong1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TextboxWrong1.LeadingIcon = null;
+            this.TextboxWrong1.Location = new System.Drawing.Point(343, 461);
+            this.TextboxWrong1.MaxLength = 50;
+            this.TextboxWrong1.MouseState = MaterialSkin.MouseState.OUT;
+            this.TextboxWrong1.Multiline = false;
+            this.TextboxWrong1.Name = "TextboxWrong1";
+            this.TextboxWrong1.Size = new System.Drawing.Size(569, 50);
+            this.TextboxWrong1.TabIndex = 17;
+            this.TextboxWrong1.Text = "";
+            this.TextboxWrong1.TrailingIcon = null;
+            // 
+            // TextboxWrong2
+            // 
+            this.TextboxWrong2.AnimateReadOnly = false;
+            this.TextboxWrong2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextboxWrong2.Depth = 0;
+            this.TextboxWrong2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TextboxWrong2.LeadingIcon = null;
+            this.TextboxWrong2.Location = new System.Drawing.Point(343, 542);
+            this.TextboxWrong2.MaxLength = 50;
+            this.TextboxWrong2.MouseState = MaterialSkin.MouseState.OUT;
+            this.TextboxWrong2.Multiline = false;
+            this.TextboxWrong2.Name = "TextboxWrong2";
+            this.TextboxWrong2.Size = new System.Drawing.Size(569, 50);
+            this.TextboxWrong2.TabIndex = 18;
+            this.TextboxWrong2.Text = "";
+            this.TextboxWrong2.TrailingIcon = null;
+            // 
+            // TextboxWrong3
+            // 
+            this.TextboxWrong3.AnimateReadOnly = false;
+            this.TextboxWrong3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextboxWrong3.Depth = 0;
+            this.TextboxWrong3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TextboxWrong3.LeadingIcon = null;
+            this.TextboxWrong3.Location = new System.Drawing.Point(343, 612);
+            this.TextboxWrong3.MaxLength = 50;
+            this.TextboxWrong3.MouseState = MaterialSkin.MouseState.OUT;
+            this.TextboxWrong3.Multiline = false;
+            this.TextboxWrong3.Name = "TextboxWrong3";
+            this.TextboxWrong3.Size = new System.Drawing.Size(569, 50);
+            this.TextboxWrong3.TabIndex = 19;
+            this.TextboxWrong3.Text = "";
+            this.TextboxWrong3.TrailingIcon = null;
+            // 
+            // TextboxQuestion
+            // 
+            this.TextboxQuestion.AnimateReadOnly = false;
+            this.TextboxQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.TextboxQuestion.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.TextboxQuestion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextboxQuestion.Depth = 0;
+            this.TextboxQuestion.HideSelection = true;
+            this.TextboxQuestion.Location = new System.Drawing.Point(343, 208);
+            this.TextboxQuestion.MaxLength = 32767;
+            this.TextboxQuestion.MouseState = MaterialSkin.MouseState.OUT;
+            this.TextboxQuestion.Name = "TextboxQuestion";
+            this.TextboxQuestion.PasswordChar = '\0';
+            this.TextboxQuestion.ReadOnly = false;
+            this.TextboxQuestion.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TextboxQuestion.SelectedText = "";
+            this.TextboxQuestion.SelectionLength = 0;
+            this.TextboxQuestion.SelectionStart = 0;
+            this.TextboxQuestion.ShortcutsEnabled = true;
+            this.TextboxQuestion.Size = new System.Drawing.Size(569, 133);
+            this.TextboxQuestion.TabIndex = 20;
+            this.TextboxQuestion.TabStop = false;
+            this.TextboxQuestion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextboxQuestion.UseSystemPasswordChar = false;
+            this.TextboxQuestion.Click += new System.EventHandler(this.materialMultiLineTextBox21_Click);
+            // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            this.materialLabel7.Location = new System.Drawing.Point(411, 50);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(107, 41);
+            this.materialLabel7.TabIndex = 21;
+            this.materialLabel7.Text = "Fragen";
+            // 
+            // TextboxCategory
+            // 
+            this.TextboxCategory.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.TextboxCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextboxCategory.Location = new System.Drawing.Point(343, 133);
+            this.TextboxCategory.Margin = new System.Windows.Forms.Padding(30, 3, 3, 3);
+            this.TextboxCategory.Multiline = true;
+            this.TextboxCategory.Name = "TextboxCategory";
+            this.TextboxCategory.Size = new System.Drawing.Size(219, 37);
+            this.TextboxCategory.TabIndex = 22;
+            // 
+            // materialButton3
+            // 
+            this.materialButton3.AutoSize = false;
+            this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton3.Depth = 0;
+            this.materialButton3.HighEmphasis = true;
+            this.materialButton3.Icon = ((System.Drawing.Image)(resources.GetObject("materialButton3.Icon")));
+            this.materialButton3.Image = ((System.Drawing.Image)(resources.GetObject("materialButton3.Image")));
+            this.materialButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.materialButton3.Location = new System.Drawing.Point(33, 50);
+            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton3.Name = "materialButton3";
+            this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.materialButton3.Size = new System.Drawing.Size(45, 36);
+            this.materialButton3.TabIndex = 23;
+            this.materialButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton3.UseAccentColor = false;
+            this.materialButton3.UseVisualStyleBackColor = true;
+            // 
+            // fragenDB1
+            // 
+            this.fragenDB1.DataSetName = "FragenDB";
+            this.fragenDB1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn,
+            this.questionDataGridViewTextBoxColumn,
+            this.correctanswerDataGridViewTextBoxColumn,
+            this.wronganswer1DataGridViewTextBoxColumn,
+            this.wronganswer2DataGridViewTextBoxColumn,
+            this.wronganswer3DataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.fragenTabelleBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(33, 133);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(751, 226);
+            this.dataGridView1.TabIndex = 24;
+            // 
+            // fragenTabelleBindingSource
+            // 
+            this.fragenTabelleBindingSource.DataMember = "FragenTabelle";
+            this.fragenTabelleBindingSource.DataSource = this.fragenDB1;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            // 
+            // questionDataGridViewTextBoxColumn
+            // 
+            this.questionDataGridViewTextBoxColumn.DataPropertyName = "question";
+            this.questionDataGridViewTextBoxColumn.HeaderText = "question";
+            this.questionDataGridViewTextBoxColumn.Name = "questionDataGridViewTextBoxColumn";
+            // 
+            // correctanswerDataGridViewTextBoxColumn
+            // 
+            this.correctanswerDataGridViewTextBoxColumn.DataPropertyName = "correct_answer";
+            this.correctanswerDataGridViewTextBoxColumn.HeaderText = "correct_answer";
+            this.correctanswerDataGridViewTextBoxColumn.Name = "correctanswerDataGridViewTextBoxColumn";
+            // 
+            // wronganswer1DataGridViewTextBoxColumn
+            // 
+            this.wronganswer1DataGridViewTextBoxColumn.DataPropertyName = "wrong_answer1";
+            this.wronganswer1DataGridViewTextBoxColumn.HeaderText = "wrong_answer1";
+            this.wronganswer1DataGridViewTextBoxColumn.Name = "wronganswer1DataGridViewTextBoxColumn";
+            // 
+            // wronganswer2DataGridViewTextBoxColumn
+            // 
+            this.wronganswer2DataGridViewTextBoxColumn.DataPropertyName = "wrong_answer2";
+            this.wronganswer2DataGridViewTextBoxColumn.HeaderText = "wrong_answer2";
+            this.wronganswer2DataGridViewTextBoxColumn.Name = "wronganswer2DataGridViewTextBoxColumn";
+            // 
+            // wronganswer3DataGridViewTextBoxColumn
+            // 
+            this.wronganswer3DataGridViewTextBoxColumn.DataPropertyName = "wrong_answer3";
+            this.wronganswer3DataGridViewTextBoxColumn.HeaderText = "wrong_answer3";
+            this.wronganswer3DataGridViewTextBoxColumn.Name = "wronganswer3DataGridViewTextBoxColumn";
+            // 
+            // QuestionManager
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(947, 737);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.materialButton3);
+            this.Controls.Add(this.TextboxCategory);
+            this.Controls.Add(this.materialLabel7);
+            this.Controls.Add(this.TextboxQuestion);
+            this.Controls.Add(this.TextboxWrong3);
+            this.Controls.Add(this.TextboxWrong2);
+            this.Controls.Add(this.TextboxWrong1);
+            this.Controls.Add(this.TextboxCorrect);
+            this.Controls.Add(this.materialLabel6);
+            this.Controls.Add(this.ButtonAddQuestion);
+            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.materialLabel5);
+            this.Controls.Add(this.materialLabel4);
+            this.Controls.Add(this.materialLabel3);
+            this.Controls.Add(this.materialLabel2);
+            this.Controls.Add(this.materialLabel1);
+            this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
+            this.Name = "QuestionManager";
+            this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.QuestionManager_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.fragenDB1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fragenTabelleBindingSource)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton ButtonAddQuestion;
+        private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private MaterialSkin.Controls.MaterialTextBox TextboxCorrect;
+        private MaterialSkin.Controls.MaterialTextBox TextboxWrong1;
+        private MaterialSkin.Controls.MaterialTextBox TextboxWrong2;
+        private MaterialSkin.Controls.MaterialTextBox TextboxWrong3;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox2 TextboxQuestion;
+        private MaterialSkin.Controls.MaterialLabel materialLabel7;
+        private System.Windows.Forms.TextBox TextboxCategory;
+        private MaterialSkin.Controls.MaterialButton materialButton3;
+        private FragenDB fragenDB1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn questionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correctanswerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wronganswer1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wronganswer2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wronganswer3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource fragenTabelleBindingSource;
+    }
+}

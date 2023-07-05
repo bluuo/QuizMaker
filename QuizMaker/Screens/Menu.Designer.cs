@@ -38,11 +38,11 @@
             // 
             // materialLabel1
             // 
-            this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.materialLabel1.Location = new System.Drawing.Point(59, 86);
+            this.materialLabel1.Location = new System.Drawing.Point(54, 119);
             this.materialLabel1.Margin = new System.Windows.Forms.Padding(0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
@@ -54,14 +54,14 @@
             // 
             // ButtonStart
             // 
-            this.ButtonStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ButtonStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ButtonStart.AutoSize = false;
             this.ButtonStart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonStart.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.ButtonStart.Depth = 0;
             this.ButtonStart.HighEmphasis = true;
             this.ButtonStart.Icon = null;
-            this.ButtonStart.Location = new System.Drawing.Point(76, 176);
+            this.ButtonStart.Location = new System.Drawing.Point(71, 209);
             this.ButtonStart.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonStart.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonStart.Name = "ButtonStart";
@@ -76,14 +76,14 @@
             // 
             // ButtonQuizManager
             // 
-            this.ButtonQuizManager.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ButtonQuizManager.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ButtonQuizManager.AutoSize = false;
             this.ButtonQuizManager.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonQuizManager.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.ButtonQuizManager.Depth = 0;
             this.ButtonQuizManager.HighEmphasis = true;
             this.ButtonQuizManager.Icon = null;
-            this.ButtonQuizManager.Location = new System.Drawing.Point(76, 238);
+            this.ButtonQuizManager.Location = new System.Drawing.Point(71, 271);
             this.ButtonQuizManager.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonQuizManager.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonQuizManager.Name = "ButtonQuizManager";
@@ -97,14 +97,14 @@
             // 
             // materialButton2
             // 
-            this.materialButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.materialButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialButton2.AutoSize = false;
             this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.materialButton2.Depth = 0;
             this.materialButton2.HighEmphasis = true;
             this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(76, 300);
+            this.materialButton2.Location = new System.Drawing.Point(71, 333);
             this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton2.Name = "materialButton2";
@@ -115,10 +115,11 @@
             this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton2.UseAccentColor = false;
             this.materialButton2.UseVisualStyleBackColor = true;
+            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
             // 
             // ButtonExit
             // 
-            this.ButtonExit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ButtonExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ButtonExit.AutoSize = false;
             this.ButtonExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonExit.CausesValidation = false;
@@ -126,7 +127,7 @@
             this.ButtonExit.Depth = 0;
             this.ButtonExit.HighEmphasis = true;
             this.ButtonExit.Icon = null;
-            this.ButtonExit.Location = new System.Drawing.Point(76, 414);
+            this.ButtonExit.Location = new System.Drawing.Point(71, 447);
             this.ButtonExit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonExit.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonExit.Name = "ButtonExit";
@@ -141,12 +142,12 @@
             // 
             // materialLabel2
             // 
-            this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel2.BackColor = System.Drawing.Color.Red;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.materialLabel2.Location = new System.Drawing.Point(3, 24);
+            this.materialLabel2.Location = new System.Drawing.Point(-2, 57);
             this.materialLabel2.Margin = new System.Windows.Forms.Padding(0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -159,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 511);
+            this.ClientSize = new System.Drawing.Size(300, 550);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.ButtonExit);
             this.Controls.Add(this.materialButton2);
@@ -167,6 +168,7 @@
             this.Controls.Add(this.ButtonStart);
             this.Controls.Add(this.materialLabel1);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
+            this.MinimumSize = new System.Drawing.Size(300, 550);
             this.Name = "Menu";
             this.Padding = new System.Windows.Forms.Padding(3, 24, 0, 0);
             this.Text = "QuizMaker";

@@ -53,5 +53,12 @@ namespace QuizMaker
         {
             this.Close();
         }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            Screens.QuestionManager Fragen = new Screens.QuestionManager();
+            Fragen.Show();
+            this.Visible = false;
+        }
     }
 }
