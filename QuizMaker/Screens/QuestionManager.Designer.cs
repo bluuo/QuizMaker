@@ -48,7 +48,6 @@
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
             this.fragenDB1 = new QuizMaker.FragenDB();
             this.fragenTabelleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ListboxQuestions = new System.Windows.Forms.ListBox();
             this.QuestionBox = new MaterialSkin.Controls.MaterialListBox();
             ((System.ComponentModel.ISupportInitialize)(this.fragenDB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fragenTabelleBindingSource)).BeginInit();
@@ -332,16 +331,6 @@
             this.fragenTabelleBindingSource.DataMember = "FragenTabelle";
             this.fragenTabelleBindingSource.DataSource = this.fragenDB1;
             // 
-            // ListboxQuestions
-            // 
-            this.ListboxQuestions.FormattingEnabled = true;
-            this.ListboxQuestions.ItemHeight = 16;
-            this.ListboxQuestions.Location = new System.Drawing.Point(44, 493);
-            this.ListboxQuestions.Name = "ListboxQuestions";
-            this.ListboxQuestions.Size = new System.Drawing.Size(371, 308);
-            this.ListboxQuestions.TabIndex = 24;
-            this.ListboxQuestions.SelectedIndexChanged += new System.EventHandler(this.ListboxQuestions_SelectedIndexChanged);
-            // 
             // QuestionBox
             // 
             this.QuestionBox.BackColor = System.Drawing.Color.White;
@@ -353,7 +342,7 @@
             this.QuestionBox.Name = "QuestionBox";
             this.QuestionBox.SelectedIndex = -1;
             this.QuestionBox.SelectedItem = null;
-            this.QuestionBox.Size = new System.Drawing.Size(371, 340);
+            this.QuestionBox.Size = new System.Drawing.Size(371, 666);
             this.QuestionBox.TabIndex = 25;
             // 
             // QuestionManager
@@ -362,7 +351,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 907);
             this.Controls.Add(this.QuestionBox);
-            this.Controls.Add(this.ListboxQuestions);
             this.Controls.Add(this.materialButton3);
             this.Controls.Add(this.TextboxCategory);
             this.Controls.Add(this.materialLabel7);
@@ -411,7 +399,6 @@
         private MaterialSkin.Controls.MaterialButton materialButton3;
         private FragenDB fragenDB1;
         private System.Windows.Forms.BindingSource fragenTabelleBindingSource;
-        private System.Windows.Forms.ListBox ListboxQuestions;
         private MaterialSkin.Controls.MaterialListBox QuestionBox;
     }
 }
