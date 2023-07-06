@@ -16,7 +16,7 @@ namespace QuizMaker
 
         public static void showMenu()
         {
-            QuizMaker.Menu Menu = new QuizMaker.Menu();
+            QuizMaker.Screens.Menu Menu = new QuizMaker.Screens.Menu();
             Menu.Show();
         }
     }

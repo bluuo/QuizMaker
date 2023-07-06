@@ -1,4 +1,4 @@
-﻿namespace QuizMaker
+﻿namespace QuizMaker.Screens
 {
     partial class Menu
     {
@@ -42,7 +42,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.materialLabel1.Location = new System.Drawing.Point(54, 119);
+            this.materialLabel1.Location = new System.Drawing.Point(52, 70);
             this.materialLabel1.Margin = new System.Windows.Forms.Padding(0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
@@ -61,7 +61,7 @@
             this.ButtonStart.Depth = 0;
             this.ButtonStart.HighEmphasis = true;
             this.ButtonStart.Icon = null;
-            this.ButtonStart.Location = new System.Drawing.Point(71, 209);
+            this.ButtonStart.Location = new System.Drawing.Point(70, 115);
             this.ButtonStart.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonStart.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonStart.Name = "ButtonStart";
@@ -83,7 +83,7 @@
             this.ButtonQuizManager.Depth = 0;
             this.ButtonQuizManager.HighEmphasis = true;
             this.ButtonQuizManager.Icon = null;
-            this.ButtonQuizManager.Location = new System.Drawing.Point(71, 271);
+            this.ButtonQuizManager.Location = new System.Drawing.Point(70, 177);
             this.ButtonQuizManager.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonQuizManager.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonQuizManager.Name = "ButtonQuizManager";
@@ -102,9 +102,10 @@
             this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.materialButton2.Depth = 0;
+            this.materialButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.materialButton2.HighEmphasis = true;
             this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(71, 333);
+            this.materialButton2.Location = new System.Drawing.Point(70, 239);
             this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton2.Name = "materialButton2";
@@ -119,7 +120,7 @@
             // 
             // ButtonExit
             // 
-            this.ButtonExit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ButtonExit.AutoSize = false;
             this.ButtonExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonExit.CausesValidation = false;
@@ -127,7 +128,7 @@
             this.ButtonExit.Depth = 0;
             this.ButtonExit.HighEmphasis = true;
             this.ButtonExit.Icon = null;
-            this.ButtonExit.Location = new System.Drawing.Point(71, 447);
+            this.ButtonExit.Location = new System.Drawing.Point(70, 435);
             this.ButtonExit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonExit.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonExit.Name = "ButtonExit";
@@ -142,12 +143,12 @@
             // 
             // materialLabel2
             // 
-            this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.materialLabel2.BackColor = System.Drawing.Color.Red;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.materialLabel2.Location = new System.Drawing.Point(-2, 57);
+            this.materialLabel2.Location = new System.Drawing.Point(-4, 9);
             this.materialLabel2.Margin = new System.Windows.Forms.Padding(0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -160,17 +161,27 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(300, 550);
+            this.ControlBox = false;
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.ButtonExit);
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.ButtonQuizManager);
             this.Controls.Add(this.ButtonStart);
             this.Controls.Add(this.materialLabel1);
+            this.DrawerHighlightWithAccent = false;
+            this.ForeColor = System.Drawing.Color.Transparent;
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(300, 550);
             this.Name = "Menu";
-            this.Padding = new System.Windows.Forms.Padding(3, 24, 0, 0);
+            this.Opacity = 0D;
+            this.Padding = new System.Windows.Forms.Padding(0);
+            this.ShowInTaskbar = false;
+            this.Sizable = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "QuizMaker";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);

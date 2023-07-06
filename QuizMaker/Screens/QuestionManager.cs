@@ -38,14 +38,7 @@ namespace QuizMaker.Screens
 
         private void QuestionManager_Load(object sender, EventArgs e)
         {
-            TextboxCategory.AutoCompleteCustomSource.Add("Apple");
-            TextboxCategory.AutoCompleteCustomSource.Add("Banana");
-            TextboxCategory.AutoCompleteCustomSource.Add("Cherry");
-            TextboxCategory.AutoCompleteMode = AutoCompleteMode.Suggest;
-            TextboxCategory.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
             updateQuestionListbox();
-
         }
 
         private void updateQuestionListbox()
@@ -144,7 +137,7 @@ namespace QuizMaker.Screens
 
         private void materialButton3_Click(object sender, EventArgs e)
         {
-            HelperClass.showMenu();
+            MainForm.GetInstance().showMenu();
             this.Visible = false;
         }
     }
