@@ -14,6 +14,7 @@ using Npgsql;
 using System.Data.SqlClient;
 using static System.Net.Mime.MediaTypeNames;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace QuizMaker.Screens
 {
@@ -139,6 +140,66 @@ namespace QuizMaker.Screens
         {
             MainForm.GetInstance().showMenu();
             this.Visible = false;
+        }
+
+        private void ButtonGenerate_Click(object sender, EventArgs e)
+        {
+            OpenAIGptClient client = new OpenAIGptClient();
+            string prompt = "Generiere eine interessante Quizfrage mit 4 möglichen antworten. die erste Antwort soll richtig sein. Antworte direkt mit der Frage und den Antworten.Verwende dabei folgende Vorlage: Frage@Richtige Antwort@Falsche Antwort@Falsche Antwort@Falsche Antwort";
+            string[] result;
+            do {
+                string response = client.SendApiRequest(prompt);
+                string content = client.ExtractContentFromResponse(response);
+                result = content.Split('@');
+            } while (result.Length != 5);
+            
+
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True"; // Replace with your actual connection string
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = connection.CreateCommand();
+            connection.Open();
+            command.CommandText =
+                "Insert into QuestionsTable(category, question, answer_correct, answer_wrong1, answer_wrong2, answer_wrong3) " +
+                "VALUES ('AI', '" + result[0] + "', '" + result[1] + "', '" + result[2] + "', '" + result[3] + "', '" + result[4] + "')";
+            command.Connection = connection;
+            command.ExecuteNonQuery();
+            connection.Close();
+            updateQuestionListbox();
+
+        }
+
+        private void QuestionBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Regex regex = new Regex(@"^\d+");
+            Match match = regex.Match(QuestionBox.SelectedItem.Text.ToString());
+
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * from QuestionsTable where id =" + match.Value.ToString();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        QuestionBox.Items.Clear();
+
+                        while (reader.Read())
+                        {
+                            TextboxCategory.Text = reader.IsDBNull(1) ? string.Empty : reader.GetString(1);
+                            TextboxQuestion.Text = reader.IsDBNull(2) ? string.Empty : reader.GetString(2);
+                            TextboxCorrect.Text = reader.IsDBNull(3) ? string.Empty : reader.GetString(3);
+                            TextboxWrong1.Text = reader.IsDBNull(4) ? string.Empty : reader.GetString(4);
+                            TextboxWrong2.Text = reader.IsDBNull(5) ? string.Empty : reader.GetString(5);
+                            TextboxWrong3.Text = reader.IsDBNull(6) ? string.Empty : reader.GetString(6);
+                        }
+                    }
+                }
+            }
+            updateQuestionListbox();
         }
     }
 }
