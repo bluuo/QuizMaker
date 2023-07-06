@@ -3,14 +3,26 @@ using System.IO;
 using System.Net;
 using System.Xml.Linq;
 using Newtonsoft.Json.Linq;
+using System.IO;
+using YamlDotNet.Serialization;
+using System.Collections.Generic;
 
 public class OpenAIGptClient
-{
-    private const string GptApiKey = "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";
+{ 
+
     private const string GptEndpointUrl = "https://api.openai.com/v1/chat/completions";
 
     public string SendApiRequest(string message)
     {
+        // Load the YAML configuration
+        var deserializer = new DeserializerBuilder().Build();
+        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "config.yaml");
+        var yamlConfig = deserializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(filePath));
+
+
+        // Access the value
+        string GptApiKey = yamlConfig["key"];
+
         string result = string.Empty;
 
         try

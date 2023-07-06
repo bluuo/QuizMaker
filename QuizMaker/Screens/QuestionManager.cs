@@ -146,13 +146,20 @@ namespace QuizMaker.Screens
         {
             OpenAIGptClient client = new OpenAIGptClient();
             string prompt = "Generiere eine interessante Quizfrage mit 4 möglichen antworten. die erste Antwort soll richtig sein. Antworte direkt mit der Frage und den Antworten.Verwende dabei folgende Vorlage: Frage@Richtige Antwort@Falsche Antwort@Falsche Antwort@Falsche Antwort";
+            
+            int resultLength;
+            int counter = 0;
             string[] result;
-            do {
+            do
+            {
                 string response = client.SendApiRequest(prompt);
                 string content = client.ExtractContentFromResponse(response);
-                result = content.Split('@');
-            } while (result.Length != 5);
-            
+                string[] temp_result = content.Split('@');
+                resultLength = temp_result.Length;
+                result = temp_result;
+                counter++;
+            } while (resultLength != 5 && counter < 5);
+
 
             string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True"; // Replace with your actual connection string
 
