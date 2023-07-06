@@ -49,6 +49,7 @@
             this.fragenDB1 = new QuizMaker.FragenDB();
             this.fragenTabelleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ListboxQuestions = new System.Windows.Forms.ListBox();
+            this.QuestionBox = new MaterialSkin.Controls.MaterialListBox();
             ((System.ComponentModel.ISupportInitialize)(this.fragenDB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fragenTabelleBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -313,7 +314,7 @@
             this.materialButton3.Name = "materialButton3";
             this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
             this.materialButton3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialButton3.Size = new System.Drawing.Size(60, 44);
+            this.materialButton3.Size = new System.Drawing.Size(55, 44);
             this.materialButton3.TabIndex = 23;
             this.materialButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -335,17 +336,32 @@
             // 
             this.ListboxQuestions.FormattingEnabled = true;
             this.ListboxQuestions.ItemHeight = 16;
-            this.ListboxQuestions.Location = new System.Drawing.Point(44, 125);
+            this.ListboxQuestions.Location = new System.Drawing.Point(44, 493);
             this.ListboxQuestions.Name = "ListboxQuestions";
-            this.ListboxQuestions.Size = new System.Drawing.Size(371, 676);
+            this.ListboxQuestions.Size = new System.Drawing.Size(371, 308);
             this.ListboxQuestions.TabIndex = 24;
             this.ListboxQuestions.SelectedIndexChanged += new System.EventHandler(this.ListboxQuestions_SelectedIndexChanged);
+            // 
+            // QuestionBox
+            // 
+            this.QuestionBox.BackColor = System.Drawing.Color.White;
+            this.QuestionBox.BorderColor = System.Drawing.Color.LightGray;
+            this.QuestionBox.Depth = 0;
+            this.QuestionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.QuestionBox.Location = new System.Drawing.Point(44, 135);
+            this.QuestionBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.QuestionBox.Name = "QuestionBox";
+            this.QuestionBox.SelectedIndex = -1;
+            this.QuestionBox.SelectedItem = null;
+            this.QuestionBox.Size = new System.Drawing.Size(371, 340);
+            this.QuestionBox.TabIndex = 25;
             // 
             // QuestionManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 907);
+            this.Controls.Add(this.QuestionBox);
             this.Controls.Add(this.ListboxQuestions);
             this.Controls.Add(this.materialButton3);
             this.Controls.Add(this.TextboxCategory);
@@ -396,5 +412,6 @@
         private FragenDB fragenDB1;
         private System.Windows.Forms.BindingSource fragenTabelleBindingSource;
         private System.Windows.Forms.ListBox ListboxQuestions;
+        private MaterialSkin.Controls.MaterialListBox QuestionBox;
     }
 }

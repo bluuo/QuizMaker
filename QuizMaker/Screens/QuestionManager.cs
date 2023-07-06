@@ -61,7 +61,7 @@ namespace QuizMaker.Screens
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        ListboxQuestions.Items.Clear();
+                        QuestionBox.Items.Clear();
 
                         while (reader.Read())
                         {
@@ -75,10 +75,13 @@ namespace QuizMaker.Screens
                             string answer_wrong3 = reader.IsDBNull(6) ? string.Empty : reader.GetString(6);
 
                             // Create a formatted string to represent the row
-                            string rowText = $"{id} {category} {question}";
+
+
+                            MaterialListBoxItem rowText = new MaterialListBoxItem(""+id+" "+category+" "+question+"");
 
                             // Add the row to the ListBox
-                            ListboxQuestions.Items.Add(rowText);
+                            QuestionBox.AddItem(rowText);
+                            //ListboxQuestions.Items.Add(rowText);
                         }
                     }
                 }
@@ -102,7 +105,6 @@ namespace QuizMaker.Screens
                 "VALUES ('"+TextboxCategory.Text+"', '"+TextboxCategory.Text+"', '"+TextboxCorrect.Text+"', '"+TextboxWrong1.Text+"', '"+TextboxWrong2.Text+"', '"+TextboxWrong3.Text+"')";
             command.Connection = connection;
             command.ExecuteNonQuery();
-            MessageBox.Show("Record Submitted", "Nice");
             connection.Close();
             updateQuestionListbox();
         }
@@ -119,14 +121,14 @@ namespace QuizMaker.Screens
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            if (ListboxQuestions.SelectedIndex == -1) //no selection
+            if (QuestionBox.SelectedIndex == -1) //no selection
                 MessageBox.Show("Bitte wählen Sie eine Frage aus!");
             else
             {
                 string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True"; // Replace with your actual connection string
 
                 Regex regex = new Regex(@"^\d+");
-                Match match = regex.Match(ListboxQuestions.SelectedItem.ToString());
+                Match match = regex.Match(QuestionBox.SelectedItem.Text.ToString());
 
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand command = connection.CreateCommand();
@@ -134,7 +136,6 @@ namespace QuizMaker.Screens
                 command.CommandText = "DELETE from QuestionsTable where id =" + match.Value.ToString();
                 command.Connection = connection;
                 command.ExecuteNonQuery();
-                MessageBox.Show("Frage wurde gelöscht.");
                 connection.Close();
                 updateQuestionListbox();
             };
