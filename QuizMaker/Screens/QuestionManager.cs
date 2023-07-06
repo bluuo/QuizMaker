@@ -140,5 +140,11 @@ namespace QuizMaker.Screens
             };
 
         }
+
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            HelperClass.showMenu();
+            this.Visible = false;
+        }
     }
 }

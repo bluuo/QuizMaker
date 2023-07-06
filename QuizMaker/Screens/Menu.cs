@@ -14,8 +14,6 @@ namespace QuizMaker
 {
     public partial class Menu : MaterialForm
     {
-
-
         public Menu()
         {
             InitializeComponent();
