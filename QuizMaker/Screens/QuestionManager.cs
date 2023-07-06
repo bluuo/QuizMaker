@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Npgsql;
 using System.Data.SqlClient;
+using static System.Net.Mime.MediaTypeNames;
+using System.Text.RegularExpressions;
 
 namespace QuizMaker.Screens
 {
@@ -42,9 +44,13 @@ namespace QuizMaker.Screens
             TextboxCategory.AutoCompleteMode = AutoCompleteMode.Suggest;
             TextboxCategory.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True"; // Replace with your actual connection string
-           
+            updateQuestionListbox();
 
+        }
+
+        private void updateQuestionListbox()
+        {
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM QuestionsTable"; // Replace with your actual table name
@@ -55,6 +61,8 @@ namespace QuizMaker.Screens
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
+                        ListboxQuestions.Items.Clear();
+
                         while (reader.Read())
                         {
                             // Retrieve values for each row
@@ -75,7 +83,6 @@ namespace QuizMaker.Screens
                     }
                 }
             }
-
         }
 
         private void materialMultiLineTextBox21_Click(object sender, EventArgs e)
@@ -92,12 +99,12 @@ namespace QuizMaker.Screens
             connection.Open();
             command.CommandText =
                 "Insert into QuestionsTable(category, question, answer_correct, answer_wrong1, answer_wrong2, answer_wrong3) " +
-                "VALUES ('value1', 'value2', 'value3', 'value4', 'value5', 'value6')";
+                "VALUES ('"+TextboxCategory.Text+"', '"+TextboxCategory.Text+"', '"+TextboxCorrect.Text+"', '"+TextboxWrong1.Text+"', '"+TextboxWrong2.Text+"', '"+TextboxWrong3.Text+"')";
             command.Connection = connection;
             command.ExecuteNonQuery();
-            MessageBox.Show("Record Submitted", "Congrats");
+            MessageBox.Show("Record Submitted", "Nice");
             connection.Close();
-
+            updateQuestionListbox();
         }
 
         private void ListboxQuestions_SelectedIndexChanged(object sender, MaterialListBoxItem selectedItem)
@@ -112,7 +119,26 @@ namespace QuizMaker.Screens
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            
+            if (ListboxQuestions.SelectedIndex == -1) //no selection
+                MessageBox.Show("Bitte wählen Sie eine Frage aus!");
+            else
+            {
+                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True"; // Replace with your actual connection string
+
+                Regex regex = new Regex(@"^\d+");
+                Match match = regex.Match(ListboxQuestions.SelectedItem.ToString());
+
+                SqlConnection connection = new SqlConnection(connectionString);
+                SqlCommand command = connection.CreateCommand();
+                connection.Open();
+                command.CommandText = "DELETE from QuestionsTable where id =" + match.Value.ToString();
+                command.Connection = connection;
+                command.ExecuteNonQuery();
+                MessageBox.Show("Frage wurde gelöscht.");
+                connection.Close();
+                updateQuestionListbox();
+            };
+
         }
     }
 }

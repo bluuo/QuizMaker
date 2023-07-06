@@ -44,9 +44,9 @@ namespace QuizMaker
 
         private void ButtonStart_Click(object sender, EventArgs e)
         {
-            Screens.PlayQuiz Quiz = new Screens.PlayQuiz();
-            Quiz.Show();
-            this.Visible = false;
+            //Screens.PlayQuiz Quiz = new Screens.PlayQuiz();
+            //Quiz.Show();
+            //this.Visible = false;
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)

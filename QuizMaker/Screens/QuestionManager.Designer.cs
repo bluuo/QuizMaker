@@ -58,7 +58,7 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(457, 229);
+            this.materialLabel1.Location = new System.Drawing.Point(457, 225);
             this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
@@ -71,7 +71,7 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(457, 433);
+            this.materialLabel2.Location = new System.Drawing.Point(457, 434);
             this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -84,7 +84,7 @@
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(457, 533);
+            this.materialLabel3.Location = new System.Drawing.Point(457, 529);
             this.materialLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
@@ -97,7 +97,7 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(457, 633);
+            this.materialLabel4.Location = new System.Drawing.Point(457, 624);
             this.materialLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
@@ -110,7 +110,7 @@
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(461, 732);
+            this.materialLabel5.Location = new System.Drawing.Point(461, 719);
             this.materialLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
@@ -165,7 +165,7 @@
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(457, 137);
+            this.materialLabel6.Location = new System.Drawing.Point(457, 135);
             this.materialLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
@@ -180,7 +180,7 @@
             this.TextboxCorrect.Depth = 0;
             this.TextboxCorrect.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxCorrect.LeadingIcon = null;
-            this.TextboxCorrect.Location = new System.Drawing.Point(457, 468);
+            this.TextboxCorrect.Location = new System.Drawing.Point(457, 466);
             this.TextboxCorrect.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxCorrect.MaxLength = 50;
             this.TextboxCorrect.MouseState = MaterialSkin.MouseState.OUT;
@@ -198,7 +198,7 @@
             this.TextboxWrong1.Depth = 0;
             this.TextboxWrong1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxWrong1.LeadingIcon = null;
-            this.TextboxWrong1.Location = new System.Drawing.Point(457, 567);
+            this.TextboxWrong1.Location = new System.Drawing.Point(457, 561);
             this.TextboxWrong1.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxWrong1.MaxLength = 50;
             this.TextboxWrong1.MouseState = MaterialSkin.MouseState.OUT;
@@ -216,7 +216,7 @@
             this.TextboxWrong2.Depth = 0;
             this.TextboxWrong2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxWrong2.LeadingIcon = null;
-            this.TextboxWrong2.Location = new System.Drawing.Point(457, 667);
+            this.TextboxWrong2.Location = new System.Drawing.Point(457, 656);
             this.TextboxWrong2.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxWrong2.MaxLength = 50;
             this.TextboxWrong2.MouseState = MaterialSkin.MouseState.OUT;
@@ -234,7 +234,7 @@
             this.TextboxWrong3.Depth = 0;
             this.TextboxWrong3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxWrong3.LeadingIcon = null;
-            this.TextboxWrong3.Location = new System.Drawing.Point(457, 753);
+            this.TextboxWrong3.Location = new System.Drawing.Point(457, 751);
             this.TextboxWrong3.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxWrong3.MaxLength = 50;
             this.TextboxWrong3.MouseState = MaterialSkin.MouseState.OUT;
@@ -253,7 +253,7 @@
             this.TextboxQuestion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextboxQuestion.Depth = 0;
             this.TextboxQuestion.HideSelection = true;
-            this.TextboxQuestion.Location = new System.Drawing.Point(457, 256);
+            this.TextboxQuestion.Location = new System.Drawing.Point(457, 257);
             this.TextboxQuestion.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxQuestion.MaxLength = 32767;
             this.TextboxQuestion.MouseState = MaterialSkin.MouseState.OUT;
@@ -290,7 +290,7 @@
             // 
             this.TextboxCategory.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.TextboxCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TextboxCategory.Location = new System.Drawing.Point(457, 164);
+            this.TextboxCategory.Location = new System.Drawing.Point(457, 167);
             this.TextboxCategory.Margin = new System.Windows.Forms.Padding(40, 4, 4, 4);
             this.TextboxCategory.Multiline = true;
             this.TextboxCategory.Name = "TextboxCategory";
