@@ -58,6 +58,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Fragen.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Screens\QuizPreStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\QuizPreStart.Designer.cs">
+      <DependentUpon>QuizPreStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\QuestionManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Screens\QuizPreStart.resx">
+      <DependentUpon>QuizPreStart.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Fragen.xsc">
       <DependentUpon>Fragen.xsd</DependentUpon>
     </None>
