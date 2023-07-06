@@ -4,15 +4,15 @@
 
 Hier inst in Screenshots festgehalten wei man die lokale Datenbank anlegt, damit das Programm Daten schreiben und entfernen kann:
 
-![2023-07-06 14_27_20-](C:\Users\micha\Pictures\Screenshots\2023-07-06 14_27_20-.png)
+![2023-07-06 14_27_20-](C:\Users\micha\source\repos\bluuo\QuizMaker\misc\2023-07-06 14_27_20-.png)
 
-![2023-07-06 14_28_37-Window](C:\Users\micha\Pictures\Screenshots\2023-07-06 14_28_37-Window.png)
+![2023-07-06 14_28_37-Window](C:\Users\micha\source\repos\bluuo\QuizMaker\misc\2023-07-06 14_28_37-Window.png)
 
 Doppelklick auf die Datenbank:
 
-![2023-07-06 14_29_16-Window](C:\Users\micha\Pictures\Screenshots\2023-07-06 14_29_16-Window.png)
+![2023-07-06 14_29_16-Window](C:\Users\micha\source\repos\bluuo\QuizMaker\misc\2023-07-06 14_29_16-Window.png)
 
-![2023-07-06 14_29_36-Window](C:\Users\micha\Pictures\Screenshots\2023-07-06 14_29_36-Window.png)
+![2023-07-06 14_29_36-Window](C:\Users\micha\source\repos\bluuo\QuizMaker\misc\2023-07-06 14_29_36-Window.png)
 
 Folgenden Befehl in das Feld kopieren:
 
@@ -29,8 +29,8 @@ CREATE TABLE [dbo].[QuestionsTable] (
 );
 ```
 
-![2023-07-06 14_32_44-Window](C:\Users\micha\Pictures\Screenshots\2023-07-06 14_32_44-Window.png)
+![2023-07-06 14_32_44-Window](C:\Users\micha\source\repos\bluuo\QuizMaker\misc\2023-07-06 14_32_44-Window.png)
 
 Update
 
-![2023-07-06 14_33_19-Window](C:\Users\micha\Pictures\Screenshots\2023-07-06 14_33_19-Window.png)
+![2023-07-06 14_33_19-Window](C:\Users\micha\source\repos\bluuo\QuizMaker\misc\2023-07-06 14_33_19-Window.png)
