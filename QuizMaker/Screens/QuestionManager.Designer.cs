@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionManager));
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
@@ -44,22 +43,22 @@
             this.TextboxWrong3 = new MaterialSkin.Controls.MaterialTextBox();
             this.TextboxQuestion = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.TextboxCategory = new System.Windows.Forms.TextBox();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            this.QuestionBox = new MaterialSkin.Controls.MaterialListBox();
+            this.TextboxCategory = new MaterialSkin.Controls.MaterialTextBox();
             this.fragenDB1 = new QuizMaker.FragenDB();
             this.fragenTabelleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.QuestionBox = new MaterialSkin.Controls.MaterialListBox();
             ((System.ComponentModel.ISupportInitialize)(this.fragenDB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fragenTabelleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // materialLabel1
             // 
+            this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(457, 225);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel1.Location = new System.Drawing.Point(339, 89);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(41, 19);
@@ -68,11 +67,11 @@
             // 
             // materialLabel2
             // 
+            this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(457, 434);
-            this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel2.Location = new System.Drawing.Point(339, 176);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(117, 19);
@@ -81,11 +80,11 @@
             // 
             // materialLabel3
             // 
+            this.materialLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(457, 529);
-            this.materialLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel3.Location = new System.Drawing.Point(339, 263);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(115, 19);
@@ -94,11 +93,11 @@
             // 
             // materialLabel4
             // 
+            this.materialLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(457, 624);
-            this.materialLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel4.Location = new System.Drawing.Point(339, 350);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(115, 19);
@@ -107,11 +106,11 @@
             // 
             // materialLabel5
             // 
+            this.materialLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(461, 719);
-            this.materialLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel5.Location = new System.Drawing.Point(339, 437);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(115, 19);
@@ -120,19 +119,20 @@
             // 
             // ButtonLöschen
             // 
+            this.ButtonLöschen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ButtonLöschen.AutoSize = false;
             this.ButtonLöschen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonLöschen.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.ButtonLöschen.Depth = 0;
             this.ButtonLöschen.HighEmphasis = true;
             this.ButtonLöschen.Icon = null;
-            this.ButtonLöschen.Location = new System.Drawing.Point(44, 826);
-            this.ButtonLöschen.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.ButtonLöschen.Location = new System.Drawing.Point(75, 625);
+            this.ButtonLöschen.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonLöschen.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonLöschen.Name = "ButtonLöschen";
             this.ButtonLöschen.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.ButtonLöschen.Size = new System.Drawing.Size(371, 38);
-            this.ButtonLöschen.TabIndex = 11;
+            this.ButtonLöschen.Size = new System.Drawing.Size(215, 31);
+            this.ButtonLöschen.TabIndex = 8;
             this.ButtonLöschen.Text = "Ausgewählte löschen";
             this.ButtonLöschen.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.ButtonLöschen.UseAccentColor = false;
@@ -141,19 +141,20 @@
             // 
             // ButtonAddQuestion
             // 
+            this.ButtonAddQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ButtonAddQuestion.AutoSize = false;
             this.ButtonAddQuestion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonAddQuestion.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.ButtonAddQuestion.Depth = 0;
             this.ButtonAddQuestion.HighEmphasis = true;
             this.ButtonAddQuestion.Icon = null;
-            this.ButtonAddQuestion.Location = new System.Drawing.Point(653, 826);
-            this.ButtonAddQuestion.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.ButtonAddQuestion.Location = new System.Drawing.Point(480, 625);
+            this.ButtonAddQuestion.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonAddQuestion.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonAddQuestion.Name = "ButtonAddQuestion";
             this.ButtonAddQuestion.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.ButtonAddQuestion.Size = new System.Drawing.Size(371, 38);
-            this.ButtonAddQuestion.TabIndex = 12;
+            this.ButtonAddQuestion.Size = new System.Drawing.Size(189, 31);
+            this.ButtonAddQuestion.TabIndex = 7;
             this.ButtonAddQuestion.Text = "Frage hinzufügen";
             this.ButtonAddQuestion.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.ButtonAddQuestion.UseAccentColor = false;
@@ -162,11 +163,11 @@
             // 
             // materialLabel6
             // 
+            this.materialLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(457, 135);
-            this.materialLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel6.Location = new System.Drawing.Point(339, 524);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(68, 19);
@@ -175,86 +176,90 @@
             // 
             // TextboxCorrect
             // 
+            this.TextboxCorrect.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TextboxCorrect.AnimateReadOnly = false;
             this.TextboxCorrect.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextboxCorrect.Depth = 0;
             this.TextboxCorrect.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxCorrect.LeadingIcon = null;
-            this.TextboxCorrect.Location = new System.Drawing.Point(457, 466);
-            this.TextboxCorrect.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxCorrect.Location = new System.Drawing.Point(339, 204);
+            this.TextboxCorrect.Margin = new System.Windows.Forms.Padding(1);
             this.TextboxCorrect.MaxLength = 50;
             this.TextboxCorrect.MouseState = MaterialSkin.MouseState.OUT;
             this.TextboxCorrect.Multiline = false;
             this.TextboxCorrect.Name = "TextboxCorrect";
-            this.TextboxCorrect.Size = new System.Drawing.Size(759, 50);
-            this.TextboxCorrect.TabIndex = 16;
+            this.TextboxCorrect.Size = new System.Drawing.Size(462, 50);
+            this.TextboxCorrect.TabIndex = 2;
             this.TextboxCorrect.Text = "";
             this.TextboxCorrect.TrailingIcon = null;
             // 
             // TextboxWrong1
             // 
+            this.TextboxWrong1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TextboxWrong1.AnimateReadOnly = false;
             this.TextboxWrong1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextboxWrong1.Depth = 0;
             this.TextboxWrong1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxWrong1.LeadingIcon = null;
-            this.TextboxWrong1.Location = new System.Drawing.Point(457, 561);
-            this.TextboxWrong1.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxWrong1.Location = new System.Drawing.Point(339, 291);
+            this.TextboxWrong1.Margin = new System.Windows.Forms.Padding(1);
             this.TextboxWrong1.MaxLength = 50;
             this.TextboxWrong1.MouseState = MaterialSkin.MouseState.OUT;
             this.TextboxWrong1.Multiline = false;
             this.TextboxWrong1.Name = "TextboxWrong1";
-            this.TextboxWrong1.Size = new System.Drawing.Size(759, 50);
-            this.TextboxWrong1.TabIndex = 17;
+            this.TextboxWrong1.Size = new System.Drawing.Size(462, 50);
+            this.TextboxWrong1.TabIndex = 3;
             this.TextboxWrong1.Text = "";
             this.TextboxWrong1.TrailingIcon = null;
             // 
             // TextboxWrong2
             // 
+            this.TextboxWrong2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TextboxWrong2.AnimateReadOnly = false;
             this.TextboxWrong2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextboxWrong2.Depth = 0;
             this.TextboxWrong2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxWrong2.LeadingIcon = null;
-            this.TextboxWrong2.Location = new System.Drawing.Point(457, 656);
-            this.TextboxWrong2.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxWrong2.Location = new System.Drawing.Point(339, 378);
+            this.TextboxWrong2.Margin = new System.Windows.Forms.Padding(1);
             this.TextboxWrong2.MaxLength = 50;
             this.TextboxWrong2.MouseState = MaterialSkin.MouseState.OUT;
             this.TextboxWrong2.Multiline = false;
             this.TextboxWrong2.Name = "TextboxWrong2";
-            this.TextboxWrong2.Size = new System.Drawing.Size(759, 50);
-            this.TextboxWrong2.TabIndex = 18;
+            this.TextboxWrong2.Size = new System.Drawing.Size(462, 50);
+            this.TextboxWrong2.TabIndex = 4;
             this.TextboxWrong2.Text = "";
             this.TextboxWrong2.TrailingIcon = null;
             // 
             // TextboxWrong3
             // 
+            this.TextboxWrong3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TextboxWrong3.AnimateReadOnly = false;
             this.TextboxWrong3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextboxWrong3.Depth = 0;
             this.TextboxWrong3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxWrong3.LeadingIcon = null;
-            this.TextboxWrong3.Location = new System.Drawing.Point(457, 751);
-            this.TextboxWrong3.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxWrong3.Location = new System.Drawing.Point(339, 465);
+            this.TextboxWrong3.Margin = new System.Windows.Forms.Padding(1);
             this.TextboxWrong3.MaxLength = 50;
             this.TextboxWrong3.MouseState = MaterialSkin.MouseState.OUT;
             this.TextboxWrong3.Multiline = false;
             this.TextboxWrong3.Name = "TextboxWrong3";
-            this.TextboxWrong3.Size = new System.Drawing.Size(759, 50);
-            this.TextboxWrong3.TabIndex = 19;
+            this.TextboxWrong3.Size = new System.Drawing.Size(462, 50);
+            this.TextboxWrong3.TabIndex = 5;
             this.TextboxWrong3.Text = "";
             this.TextboxWrong3.TrailingIcon = null;
             // 
             // TextboxQuestion
             // 
+            this.TextboxQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TextboxQuestion.AnimateReadOnly = false;
             this.TextboxQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.TextboxQuestion.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.TextboxQuestion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextboxQuestion.Depth = 0;
             this.TextboxQuestion.HideSelection = true;
-            this.TextboxQuestion.Location = new System.Drawing.Point(457, 257);
-            this.TextboxQuestion.Margin = new System.Windows.Forms.Padding(4);
+            this.TextboxQuestion.Location = new System.Drawing.Point(339, 117);
             this.TextboxQuestion.MaxLength = 32767;
             this.TextboxQuestion.MouseState = MaterialSkin.MouseState.OUT;
             this.TextboxQuestion.Name = "TextboxQuestion";
@@ -265,8 +270,8 @@
             this.TextboxQuestion.SelectionLength = 0;
             this.TextboxQuestion.SelectionStart = 0;
             this.TextboxQuestion.ShortcutsEnabled = true;
-            this.TextboxQuestion.Size = new System.Drawing.Size(759, 164);
-            this.TextboxQuestion.TabIndex = 20;
+            this.TextboxQuestion.Size = new System.Drawing.Size(462, 50);
+            this.TextboxQuestion.TabIndex = 1;
             this.TextboxQuestion.TabStop = false;
             this.TextboxQuestion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextboxQuestion.UseSystemPasswordChar = false;
@@ -274,28 +279,18 @@
             // 
             // materialLabel7
             // 
-            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.materialLabel7.Location = new System.Drawing.Point(548, 62);
-            this.materialLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel7.Location = new System.Drawing.Point(332, 13);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(107, 41);
+            this.materialLabel7.Size = new System.Drawing.Size(119, 41);
             this.materialLabel7.TabIndex = 21;
             this.materialLabel7.Text = "Fragen";
-            // 
-            // TextboxCategory
-            // 
-            this.TextboxCategory.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.TextboxCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TextboxCategory.Location = new System.Drawing.Point(457, 167);
-            this.TextboxCategory.Margin = new System.Windows.Forms.Padding(40, 4, 4, 4);
-            this.TextboxCategory.Multiline = true;
-            this.TextboxCategory.Name = "TextboxCategory";
-            this.TextboxCategory.Size = new System.Drawing.Size(291, 45);
-            this.TextboxCategory.TabIndex = 22;
+            this.materialLabel7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // materialButton3
             // 
@@ -304,22 +299,56 @@
             this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.materialButton3.Depth = 0;
             this.materialButton3.HighEmphasis = true;
-            this.materialButton3.Icon = ((System.Drawing.Image)(resources.GetObject("materialButton3.Icon")));
-            this.materialButton3.Image = ((System.Drawing.Image)(resources.GetObject("materialButton3.Image")));
-            this.materialButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.materialButton3.Location = new System.Drawing.Point(44, 62);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.materialButton3.Icon = null;
+            this.materialButton3.Location = new System.Drawing.Point(29, 21);
+            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton3.Name = "materialButton3";
             this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
             this.materialButton3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialButton3.Size = new System.Drawing.Size(55, 44);
-            this.materialButton3.TabIndex = 23;
+            this.materialButton3.Size = new System.Drawing.Size(68, 33);
+            this.materialButton3.TabIndex = 9;
+            this.materialButton3.Text = "Zurück";
             this.materialButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton3.UseAccentColor = false;
             this.materialButton3.UseVisualStyleBackColor = true;
             this.materialButton3.Click += new System.EventHandler(this.materialButton3_Click);
+            // 
+            // QuestionBox
+            // 
+            this.QuestionBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.QuestionBox.BackColor = System.Drawing.Color.White;
+            this.QuestionBox.BorderColor = System.Drawing.Color.LightGray;
+            this.QuestionBox.Depth = 0;
+            this.QuestionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.QuestionBox.Location = new System.Drawing.Point(29, 87);
+            this.QuestionBox.Margin = new System.Windows.Forms.Padding(2);
+            this.QuestionBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.QuestionBox.Name = "QuestionBox";
+            this.QuestionBox.SelectedIndex = -1;
+            this.QuestionBox.SelectedItem = null;
+            this.QuestionBox.Size = new System.Drawing.Size(301, 515);
+            this.QuestionBox.TabIndex = 25;
+            // 
+            // TextboxCategory
+            // 
+            this.TextboxCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TextboxCategory.AnimateReadOnly = false;
+            this.TextboxCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextboxCategory.Depth = 0;
+            this.TextboxCategory.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TextboxCategory.LeadingIcon = null;
+            this.TextboxCategory.Location = new System.Drawing.Point(339, 552);
+            this.TextboxCategory.Margin = new System.Windows.Forms.Padding(1);
+            this.TextboxCategory.MaxLength = 50;
+            this.TextboxCategory.MouseState = MaterialSkin.MouseState.OUT;
+            this.TextboxCategory.Multiline = false;
+            this.TextboxCategory.Name = "TextboxCategory";
+            this.TextboxCategory.Size = new System.Drawing.Size(235, 50);
+            this.TextboxCategory.TabIndex = 6;
+            this.TextboxCategory.Text = "";
+            this.TextboxCategory.TrailingIcon = null;
             // 
             // fragenDB1
             // 
@@ -331,28 +360,15 @@
             this.fragenTabelleBindingSource.DataMember = "FragenTabelle";
             this.fragenTabelleBindingSource.DataSource = this.fragenDB1;
             // 
-            // QuestionBox
-            // 
-            this.QuestionBox.BackColor = System.Drawing.Color.White;
-            this.QuestionBox.BorderColor = System.Drawing.Color.LightGray;
-            this.QuestionBox.Depth = 0;
-            this.QuestionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.QuestionBox.Location = new System.Drawing.Point(44, 135);
-            this.QuestionBox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.QuestionBox.Name = "QuestionBox";
-            this.QuestionBox.SelectedIndex = -1;
-            this.QuestionBox.SelectedItem = null;
-            this.QuestionBox.Size = new System.Drawing.Size(371, 666);
-            this.QuestionBox.TabIndex = 25;
-            // 
             // QuestionManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 907);
+            this.ClientSize = new System.Drawing.Size(821, 683);
+            this.ControlBox = false;
+            this.Controls.Add(this.TextboxCategory);
             this.Controls.Add(this.QuestionBox);
             this.Controls.Add(this.materialButton3);
-            this.Controls.Add(this.TextboxCategory);
             this.Controls.Add(this.materialLabel7);
             this.Controls.Add(this.TextboxQuestion);
             this.Controls.Add(this.TextboxWrong3);
@@ -367,10 +383,12 @@
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
             this.Name = "QuestionManager";
-            this.Padding = new System.Windows.Forms.Padding(4, 30, 4, 4);
+            this.Padding = new System.Windows.Forms.Padding(3);
+            this.Sizable = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.QuestionManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fragenDB1)).EndInit();
@@ -395,10 +413,10 @@
         private MaterialSkin.Controls.MaterialTextBox TextboxWrong3;
         private MaterialSkin.Controls.MaterialMultiLineTextBox2 TextboxQuestion;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
-        private System.Windows.Forms.TextBox TextboxCategory;
         private MaterialSkin.Controls.MaterialButton materialButton3;
         private FragenDB fragenDB1;
         private System.Windows.Forms.BindingSource fragenTabelleBindingSource;
         private MaterialSkin.Controls.MaterialListBox QuestionBox;
+        private MaterialSkin.Controls.MaterialTextBox TextboxCategory;
     }
 }
