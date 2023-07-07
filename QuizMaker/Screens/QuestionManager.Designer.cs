@@ -46,6 +46,7 @@
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
             this.QuestionBox = new MaterialSkin.Controls.MaterialListBox();
             this.TextboxCategory = new MaterialSkin.Controls.MaterialTextBox();
+            this.ButtonGenerate = new MaterialSkin.Controls.MaterialButton();
             this.fragenDB1 = new QuizMaker.FragenDB();
             this.fragenTabelleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.fragenDB1)).BeginInit();
@@ -330,6 +331,7 @@
             this.QuestionBox.SelectedItem = null;
             this.QuestionBox.Size = new System.Drawing.Size(301, 515);
             this.QuestionBox.TabIndex = 25;
+            this.QuestionBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.QuestionBox_MouseDoubleClick);
             // 
             // TextboxCategory
             // 
@@ -350,6 +352,27 @@
             this.TextboxCategory.Text = "";
             this.TextboxCategory.TrailingIcon = null;
             // 
+            // ButtonGenerate
+            // 
+            this.ButtonGenerate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonGenerate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ButtonGenerate.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.ButtonGenerate.Depth = 0;
+            this.ButtonGenerate.HighEmphasis = true;
+            this.ButtonGenerate.Icon = null;
+            this.ButtonGenerate.Location = new System.Drawing.Point(129, 43);
+            this.ButtonGenerate.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ButtonGenerate.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ButtonGenerate.Name = "ButtonGenerate";
+            this.ButtonGenerate.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.ButtonGenerate.Size = new System.Drawing.Size(106, 36);
+            this.ButtonGenerate.TabIndex = 26;
+            this.ButtonGenerate.Text = "Generator";
+            this.ButtonGenerate.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.ButtonGenerate.UseAccentColor = false;
+            this.ButtonGenerate.UseVisualStyleBackColor = true;
+            this.ButtonGenerate.Click += new System.EventHandler(this.ButtonGenerate_Click);
+            // 
             // fragenDB1
             // 
             this.fragenDB1.DataSetName = "FragenDB";
@@ -366,6 +389,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 683);
             this.ControlBox = false;
+            this.Controls.Add(this.ButtonGenerate);
             this.Controls.Add(this.TextboxCategory);
             this.Controls.Add(this.QuestionBox);
             this.Controls.Add(this.materialButton3);
@@ -418,5 +442,6 @@
         private System.Windows.Forms.BindingSource fragenTabelleBindingSource;
         private MaterialSkin.Controls.MaterialListBox QuestionBox;
         private MaterialSkin.Controls.MaterialTextBox TextboxCategory;
+        private MaterialSkin.Controls.MaterialButton ButtonGenerate;
     }
 }
