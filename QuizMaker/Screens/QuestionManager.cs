@@ -21,6 +21,11 @@ namespace QuizMaker.Screens
     public partial class QuestionManager : MaterialForm
     {
         //private string connectionString = Properties.Settings.Default.dbConnection;
+
+        private static string relativePath = "..\\..\\Questions.mdf";
+        private static string absolutePath = Path.GetFullPath(relativePath);
+        private string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={absolutePath};Integrated Security=True";
+
         public QuestionManager()
         {
             InitializeComponent();
@@ -44,7 +49,7 @@ namespace QuizMaker.Screens
 
         private void updateQuestionListbox()
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True";
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM QuestionsTable"; // Replace with your actual table name
@@ -89,8 +94,6 @@ namespace QuizMaker.Screens
 
         private void ButtonAddQuestion_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True"; // Replace with your actual connection string
-
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
             connection.Open();
@@ -119,8 +122,6 @@ namespace QuizMaker.Screens
                 MessageBox.Show("Bitte wählen Sie eine Frage aus!");
             else
             {
-                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True"; // Replace with your actual connection string
-
                 Regex regex = new Regex(@"^\d+");
                 Match match = regex.Match(QuestionBox.SelectedItem.Text.ToString());
 
@@ -159,10 +160,6 @@ namespace QuizMaker.Screens
                 result = temp_result;
                 counter++;
             } while (resultLength != 5 && counter < 5);
-
-
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True"; // Replace with your actual connection string
-
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
             connection.Open();
@@ -181,7 +178,6 @@ namespace QuizMaker.Screens
             Regex regex = new Regex(@"^\d+");
             Match match = regex.Match(QuestionBox.SelectedItem.Text.ToString());
 
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\micha\\Source\\Repos\\bluuo\\QuizMaker\\QuizMaker\\Questions.mdf;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT * from QuestionsTable where id =" + match.Value.ToString();
