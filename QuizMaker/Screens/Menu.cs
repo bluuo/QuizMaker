@@ -10,12 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuizMaker
+namespace QuizMaker.Screens
 {
     public partial class Menu : MaterialForm
     {
-
-
         public Menu()
         {
             InitializeComponent();
@@ -44,20 +42,19 @@ namespace QuizMaker
 
         private void ButtonStart_Click(object sender, EventArgs e)
         {
-            Screens.PlayQuiz Quiz = new Screens.PlayQuiz();
-            Quiz.Show();
-            this.Visible = false;
+            //Screens.PlayQuiz Quiz = new Screens.PlayQuiz();
+            //Quiz.Show();
+            //this.Visible = false;
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            MainForm.GetInstance().Close();
         }
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-            Screens.QuestionManager Fragen = new Screens.QuestionManager();
-            Fragen.Show();
+            MainForm.GetInstance().showQuestionManager();
             this.Visible = false;
         }
     }
