@@ -160,6 +160,9 @@ namespace QuizMaker.Screens
                 result = temp_result;
                 counter++;
             } while (resultLength != 5 && counter < 5);
+            if (counter >= 5)
+                return;
+
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
             connection.Open();
