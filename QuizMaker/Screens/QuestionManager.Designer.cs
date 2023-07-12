@@ -325,7 +325,7 @@
             // 
             // ButtonGenerate
             // 
-            this.ButtonGenerate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonGenerate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonGenerate.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.ButtonGenerate.Depth = 0;
@@ -344,11 +344,11 @@
             this.ButtonGenerate.UseVisualStyleBackColor = true;
             this.ButtonGenerate.Click += new System.EventHandler(this.ButtonGenerate_Click);
             // 
-            // TestboxQuestion
+            // TextboxQuestion
             // 
             this.TextboxQuestion.Location = new System.Drawing.Point(339, 112);
             this.TextboxQuestion.Multiline = true;
-            this.TextboxQuestion.Name = "TestboxQuestion";
+            this.TextboxQuestion.Name = "TextboxQuestion";
             this.TextboxQuestion.Size = new System.Drawing.Size(462, 61);
             this.TextboxQuestion.TabIndex = 27;
             // 
@@ -385,6 +385,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.QuestionManager_Load);
+            this.Enter += new System.EventHandler(this.QuestionManager_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.fragenTabelleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

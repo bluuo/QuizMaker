@@ -7,7 +7,9 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static QuizMaker.HelperClass;
 
 
 namespace QuizMaker
@@ -121,7 +123,7 @@ namespace QuizMaker
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM QuestionsTable"; // Replace with your actual table name
+                string query = "SELECT * FROM QuizzesTable"; // Replace with your actual table name
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -144,6 +146,63 @@ namespace QuizMaker
                 }
             }
             return quizList;
+        }
+
+        public void insertQuestion(Question question)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = connection.CreateCommand();
+            connection.Open();
+            command.CommandText =
+                "Insert into QuestionsTable(category, question, answer_correct, answer_wrong1, answer_wrong2, answer_wrong3) " +
+                "VALUES ('" + question.Category+ "', '" + question.QuestionText + "', '" + question.CorrectAnswer + "', '" + question.WrongAnswer1 + "', '" + question.WrongAnswer2 + "', '" + question.WrongAnswer3 + "')";
+            command.Connection = connection;
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public void deleteQuestion(int id)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = connection.CreateCommand();
+            connection.Open();
+            command.CommandText = "DELETE from QuestionsTable where id =" + id;
+            command.Connection = connection;
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public Question getSingleQuestion(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * from QuestionsTable where id =" + id.ToString();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Question question = new Question
+                            {
+                                Id = reader.GetInt32(0),
+                                Category = reader.GetString(1),
+                                QuestionText = reader.GetString(2),
+                                CorrectAnswer = reader.GetString(3),
+                                WrongAnswer1 = reader.GetString(4),
+                                WrongAnswer2 = reader.GetString(5),
+                                WrongAnswer3 = reader.GetString(6)
+                            };
+
+                            return question;
+                        }
+                    }
+                }
+            }
+            return null;
         }
 
         public static void showMenu()

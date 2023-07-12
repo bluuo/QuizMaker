@@ -16,8 +16,6 @@ namespace QuizMaker
     {
         private static MainForm instance;
 
-
-
         public static MainForm GetInstance()
         {
             if (instance == null)
