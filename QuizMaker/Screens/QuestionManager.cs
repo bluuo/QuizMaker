@@ -160,8 +160,8 @@ namespace QuizMaker.Screens
             //command.Connection = connection;
             //command.ExecuteNonQuery();
             //connection.Close();
-            updateQuestionListbox();
 
+            updateQuestionListbox();
         }
 
         private void QuestionBox_MouseDoubleClick(object sender, MouseEventArgs e)
