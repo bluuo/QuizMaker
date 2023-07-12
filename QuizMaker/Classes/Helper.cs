@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuizMaker
 {
-    internal class Helper
+    public static class Helper
     {
         public class Question
         {
@@ -26,5 +26,9 @@ namespace QuizMaker
             public string Category { get; set; }
             public int Size { get; set; }
         }
+
+        public const int CorrectAnswer = 1;
+        public const int FalseAnswer = 0;
+
     }
 }

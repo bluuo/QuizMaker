@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static QuizMaker.Helper;
 
 namespace QuizMaker.Screens
 {
@@ -42,9 +43,10 @@ namespace QuizMaker.Screens
 
         private void ButtonStart_Click(object sender, EventArgs e)
         {
-            //Screens.PlayQuiz Quiz = new Screens.PlayQuiz();
-            //Quiz.Show();
-            //this.Visible = false;
+            MainForm.GetInstance().showPlayQuiz();
+
+            GameControler gameControler = new GameControler(1);
+            gameControler.startQuiz();
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
