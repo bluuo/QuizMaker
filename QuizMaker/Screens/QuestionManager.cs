@@ -20,9 +20,7 @@ namespace QuizMaker.Screens
 {
     public partial class QuestionManager : MaterialForm
     {
-        //private string connectionString = Properties.Settings.Default.dbConnection;
-
-        private static string relativePath = "..\\..\\Questions.mdf";
+        private static string relativePath = "..\\..\\Database.mdf";
         private static string absolutePath = Path.GetFullPath(relativePath);
         private string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={absolutePath};Integrated Security=True";
 
@@ -57,7 +55,6 @@ namespace QuizMaker.Screens
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     connection.Open();
-
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         QuestionBox.Items.Clear();
@@ -74,8 +71,6 @@ namespace QuizMaker.Screens
                             string answer_wrong3 = reader.IsDBNull(6) ? string.Empty : reader.GetString(6);
 
                             // Create a formatted string to represent the row
-
-
                             MaterialListBoxItem rowText = new MaterialListBoxItem(""+id+" "+category+" "+question+"");
 
                             // Add the row to the ListBox
@@ -104,16 +99,6 @@ namespace QuizMaker.Screens
             command.ExecuteNonQuery();
             connection.Close();
             updateQuestionListbox();
-        }
-
-        private void ListboxQuestions_SelectedIndexChanged(object sender, MaterialListBoxItem selectedItem)
-        {
-
-        }
-
-        private void ListboxQuestions_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
@@ -160,6 +145,9 @@ namespace QuizMaker.Screens
                 result = temp_result;
                 counter++;
             } while (resultLength != 5 && counter < 5);
+            if (counter >= 5)
+                return;
+
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
             connection.Open();

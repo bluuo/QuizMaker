@@ -16,6 +16,8 @@ namespace QuizMaker
     {
         private static MainForm instance;
 
+
+
         public static MainForm GetInstance()
         {
             if (instance == null)
@@ -80,6 +82,11 @@ namespace QuizMaker
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        public void playQuiz(string name, String category, int size)
         {
 
         }
