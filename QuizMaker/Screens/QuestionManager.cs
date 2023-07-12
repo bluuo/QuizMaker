@@ -10,15 +10,6 @@ namespace QuizMaker.Screens
 {
     public partial class QuestionManager : MaterialForm
     {
-        private static QuestionManager instance;
-
-        public static QuestionManager GetInstance()
-        {
-            if (instance == null)
-                instance = new QuestionManager();
-
-            return instance;
-        }
         public QuestionManager()
         {
             InitializeComponent();
