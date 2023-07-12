@@ -41,7 +41,6 @@
             this.TextboxWrong1 = new MaterialSkin.Controls.MaterialTextBox();
             this.TextboxWrong2 = new MaterialSkin.Controls.MaterialTextBox();
             this.TextboxWrong3 = new MaterialSkin.Controls.MaterialTextBox();
-            this.TextboxQuestion = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
             this.QuestionBox = new MaterialSkin.Controls.MaterialListBox();
@@ -49,6 +48,7 @@
             this.ButtonGenerate = new MaterialSkin.Controls.MaterialButton();
             this.fragenDB1 = new QuizMaker.FragenDB();
             this.fragenTabelleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TextboxQuestion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.fragenDB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fragenTabelleBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -251,33 +251,6 @@
             this.TextboxWrong3.Text = "";
             this.TextboxWrong3.TrailingIcon = null;
             // 
-            // TextboxQuestion
-            // 
-            this.TextboxQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TextboxQuestion.AnimateReadOnly = false;
-            this.TextboxQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.TextboxQuestion.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.TextboxQuestion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextboxQuestion.Depth = 0;
-            this.TextboxQuestion.HideSelection = true;
-            this.TextboxQuestion.Location = new System.Drawing.Point(339, 117);
-            this.TextboxQuestion.MaxLength = 32767;
-            this.TextboxQuestion.MouseState = MaterialSkin.MouseState.OUT;
-            this.TextboxQuestion.Name = "TextboxQuestion";
-            this.TextboxQuestion.PasswordChar = '\0';
-            this.TextboxQuestion.ReadOnly = false;
-            this.TextboxQuestion.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TextboxQuestion.SelectedText = "";
-            this.TextboxQuestion.SelectionLength = 0;
-            this.TextboxQuestion.SelectionStart = 0;
-            this.TextboxQuestion.ShortcutsEnabled = true;
-            this.TextboxQuestion.Size = new System.Drawing.Size(462, 50);
-            this.TextboxQuestion.TabIndex = 1;
-            this.TextboxQuestion.TabStop = false;
-            this.TextboxQuestion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextboxQuestion.UseSystemPasswordChar = false;
-            this.TextboxQuestion.Click += new System.EventHandler(this.materialMultiLineTextBox21_Click);
-            // 
             // materialLabel7
             // 
             this.materialLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -383,18 +356,32 @@
             this.fragenTabelleBindingSource.DataMember = "FragenTabelle";
             this.fragenTabelleBindingSource.DataSource = this.fragenDB1;
             // 
+            // TextboxQuestion
+            // 
+            this.TextboxQuestion.BackColor = System.Drawing.SystemColors.Window;
+            this.TextboxQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextboxQuestion.Font = new System.Drawing.Font("Roboto Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextboxQuestion.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TextboxQuestion.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.TextboxQuestion.Location = new System.Drawing.Point(341, 111);
+            this.TextboxQuestion.Margin = new System.Windows.Forms.Padding(30);
+            this.TextboxQuestion.Multiline = true;
+            this.TextboxQuestion.Name = "TextboxQuestion";
+            this.TextboxQuestion.Size = new System.Drawing.Size(459, 52);
+            this.TextboxQuestion.TabIndex = 27;
+            // 
             // QuestionManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 683);
             this.ControlBox = false;
+            this.Controls.Add(this.TextboxQuestion);
             this.Controls.Add(this.ButtonGenerate);
             this.Controls.Add(this.TextboxCategory);
             this.Controls.Add(this.QuestionBox);
             this.Controls.Add(this.materialButton3);
             this.Controls.Add(this.materialLabel7);
-            this.Controls.Add(this.TextboxQuestion);
             this.Controls.Add(this.TextboxWrong3);
             this.Controls.Add(this.TextboxWrong2);
             this.Controls.Add(this.TextboxWrong1);
@@ -408,6 +395,7 @@
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
+            this.MaximizeBox = false;
             this.Name = "QuestionManager";
             this.Padding = new System.Windows.Forms.Padding(3);
             this.Sizable = false;
@@ -435,7 +423,6 @@
         private MaterialSkin.Controls.MaterialTextBox TextboxWrong1;
         private MaterialSkin.Controls.MaterialTextBox TextboxWrong2;
         private MaterialSkin.Controls.MaterialTextBox TextboxWrong3;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox2 TextboxQuestion;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private MaterialSkin.Controls.MaterialButton materialButton3;
         private FragenDB fragenDB1;
@@ -443,5 +430,6 @@
         private MaterialSkin.Controls.MaterialListBox QuestionBox;
         private MaterialSkin.Controls.MaterialTextBox TextboxCategory;
         private MaterialSkin.Controls.MaterialButton ButtonGenerate;
+        private System.Windows.Forms.TextBox TextboxQuestion;
     }
 }
