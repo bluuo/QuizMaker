@@ -58,5 +58,21 @@ namespace QuizMaker.Screens
         {
 
         }
+
+        private void ButtonNext_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            MainForm.GetInstance().showMenu();
+            this.Visible = false;
+        }
     }
 }
