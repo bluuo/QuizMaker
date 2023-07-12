@@ -16,12 +16,6 @@ namespace QuizMaker.Screens
 {
     public partial class GeneratorPopup : MaterialForm
     {
-
-        private static string relativePath = "..\\..\\Questions.mdf";
-        private static string absolutePath = Path.GetFullPath(relativePath);
-        private string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={absolutePath};Integrated Security=True";
-
-
         public GeneratorPopup()
         {
             InitializeComponent();
@@ -48,10 +42,9 @@ namespace QuizMaker.Screens
             {
                 generateQuestion();
             }
-            Screens.QuestionManager questionManager = new Screens.QuestionManager();
-            questionManager.updateQuestionListbox();
             this.Close();
-            }
+            MainForm.GetInstance().showQuestionManager();
+        }
         private void generateQuestion()
         {
             OpenAIGptClient client = new OpenAIGptClient();
@@ -91,20 +84,25 @@ namespace QuizMaker.Screens
                 string[] temp_result = content.Split('@');
                 resultLength = temp_result.Length;
                 result = temp_result;
+
+                
+
                 counter++;
             } while (resultLength != 5 && counter < 5);
             if (counter >= 5)
                 return;
 
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand command = connection.CreateCommand();
-            connection.Open();
-            command.CommandText =
-                "Insert into QuestionsTable(category, question, answer_correct, answer_wrong1, answer_wrong2, answer_wrong3) " +
-                "VALUES ('AI', '" + result[0] + "', '" + result[1] + "', '" + result[2] + "', '" + result[3] + "', '" + result[4] + "')";
-            command.Connection = connection;
-            command.ExecuteNonQuery();
-            connection.Close();
+            HelperClass.Question question = new HelperClass.Question()
+            {
+                Category = TextboxCategory.Text,
+                QuestionText = result[0],
+                CorrectAnswer = result[1],
+                WrongAnswer1 = result[2],
+                WrongAnswer2 = result[3],
+                WrongAnswer3 = result[4],
+            };
+
+            HelperClass.GetInstance().insertQuestion(question);
         }
 
         private void LevelSlider_Click(object sender, EventArgs e)
