@@ -45,7 +45,7 @@ namespace QuizMaker.Screens
             updateQuestionListbox();
         }
 
-        private void updateQuestionListbox()
+        public void updateQuestionListbox()
         {
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -94,7 +94,7 @@ namespace QuizMaker.Screens
             connection.Open();
             command.CommandText =
                 "Insert into QuestionsTable(category, question, answer_correct, answer_wrong1, answer_wrong2, answer_wrong3) " +
-                "VALUES ('"+TextboxCategory.Text+"', '"+TextboxCategory.Text+"', '"+TextboxCorrect.Text+"', '"+TextboxWrong1.Text+"', '"+TextboxWrong2.Text+"', '"+TextboxWrong3.Text+"')";
+                "VALUES ('"+TextboxCategory.Text+"', '"+TextboxQuestion.Text+"', '"+TextboxCorrect.Text+"', '"+TextboxWrong1.Text+"', '"+TextboxWrong2.Text+"', '"+TextboxWrong3.Text+"')";
             command.Connection = connection;
             command.ExecuteNonQuery();
             connection.Close();
@@ -130,35 +130,38 @@ namespace QuizMaker.Screens
 
         private void ButtonGenerate_Click(object sender, EventArgs e)
         {
-            OpenAIGptClient client = new OpenAIGptClient();
-            string prompt = "Generiere eine interessante Quizfrage mit 4 möglichen antworten. die erste Antwort soll richtig sein. Antworte direkt mit der Frage und den Antworten.Verwende dabei folgende Vorlage: Frage@Richtige Antwort@Falsche Antwort@Falsche Antwort@Falsche Antwort";
-            
-            int resultLength;
-            int counter = 0;
-            string[] result;
-            do
-            {
-                string response = client.SendApiRequest(prompt);
-                string content = client.ExtractContentFromResponse(response);
-                string[] temp_result = content.Split('@');
-                resultLength = temp_result.Length;
-                result = temp_result;
-                counter++;
-            } while (resultLength != 5 && counter < 5);
-            if (counter >= 5)
-                return;
+            Screens.GeneratorPopup generatorPopup = new Screens.GeneratorPopup();
+            generatorPopup.Show();
 
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand command = connection.CreateCommand();
-            connection.Open();
-            command.CommandText =
-                "Insert into QuestionsTable(category, question, answer_correct, answer_wrong1, answer_wrong2, answer_wrong3) " +
-                "VALUES ('AI', '" + result[0] + "', '" + result[1] + "', '" + result[2] + "', '" + result[3] + "', '" + result[4] + "')";
-            command.Connection = connection;
-            command.ExecuteNonQuery();
-            connection.Close();
+            //OpenAIGptClient client = new OpenAIGptClient();
+            //string prompt = "Generiere eine interessante Quizfrage mit 4 möglichen antworten. die erste Antwort soll richtig sein. Antworte direkt mit der Frage und den Antworten.Verwende dabei folgende Vorlage: Frage@Richtige Antwort@Falsche Antwort@Falsche Antwort@Falsche Antwort";
+
+            //int resultLength;
+            //int counter = 0;
+            //string[] result;
+            //do
+            //{
+            //    string response = client.SendApiRequest(prompt);
+            //    string content = client.ExtractContentFromResponse(response);
+            //    string[] temp_result = content.Split('@');
+            //    resultLength = temp_result.Length;
+            //    result = temp_result;
+            //    counter++;
+            //} while (resultLength != 5 && counter < 5);
+            //if (counter >= 5)
+            //    return;
+
+            //SqlConnection connection = new SqlConnection(connectionString);
+            //SqlCommand command = connection.CreateCommand();
+            //connection.Open();
+            //command.CommandText =
+            //    "Insert into QuestionsTable(category, question, answer_correct, answer_wrong1, answer_wrong2, answer_wrong3) " +
+            //    "VALUES ('AI', '" + result[0] + "', '" + result[1] + "', '" + result[2] + "', '" + result[3] + "', '" + result[4] + "')";
+            //command.Connection = connection;
+            //command.ExecuteNonQuery();
+            //connection.Close();
+
             updateQuestionListbox();
-
         }
 
         private void QuestionBox_MouseDoubleClick(object sender, MouseEventArgs e)
