@@ -106,5 +106,10 @@ namespace QuizMaker.Screens
             command.ExecuteNonQuery();
             connection.Close();
         }
+
+        private void LevelSlider_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
