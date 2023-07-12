@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static QuizMaker.DAO;
 
 namespace QuizMaker.Screens
 {
@@ -18,7 +19,6 @@ namespace QuizMaker.Screens
         private static string relativePath = "..\\..\\Database.mdf";
         private static string absolutePath = Path.GetFullPath(relativePath);
         private string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={absolutePath};Integrated Security=True";
-
 
         public PlayQuiz()
         {
@@ -33,7 +33,6 @@ namespace QuizMaker.Screens
                  Primary.Grey500,
                  Accent.LightBlue700,
                  TextShade.WHITE);
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)

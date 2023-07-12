@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static QuizMaker.Helper;
+using static QuizMaker.DAO;
 
 namespace QuizMaker.Screens
 {
@@ -92,7 +94,7 @@ namespace QuizMaker.Screens
             if (counter >= 5)
                 return;
 
-            HelperClass.Question question = new HelperClass.Question()
+            Question question = new Question()
             {
                 Category = TextboxCategory.Text,
                 QuestionText = result[0],
@@ -102,7 +104,7 @@ namespace QuizMaker.Screens
                 WrongAnswer3 = result[4],
             };
 
-            HelperClass.GetInstance().insertQuestion(question);
+            DAO.GetInstance().insertQuestion(question);
         }
 
         private void LevelSlider_Click(object sender, EventArgs e)

@@ -43,7 +43,7 @@
             this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(6, 36);
+            this.materialLabel1.Location = new System.Drawing.Point(6, 61);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(597, 147);

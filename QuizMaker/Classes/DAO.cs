@@ -9,42 +9,23 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using static QuizMaker.HelperClass;
-
+using static QuizMaker.DAO;
+using static QuizMaker.Helper;
 
 namespace QuizMaker
 {
-    internal class HelperClass
+    class DAO
     {
-        public class Question
-        {
-            public int Id { get; set; }
-            public string Category { get; set; }
-            public string QuestionText { get; set; }
-            public string CorrectAnswer { get; set; }
-            public string WrongAnswer1 { get; set; }
-            public string WrongAnswer2 { get; set; }
-            public string WrongAnswer3 { get; set; }
-        }
-
-        public class Quiz
-        {
-            public int Id { get; set; }
-            public string Name { get; set; }
-            public string Category { get; set; }
-            public int Size { get; set; }
-        }
-
         private static string relativePath = "..\\..\\Database.mdf";
         private static string absolutePath = Path.GetFullPath(relativePath);
         private string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={absolutePath};Integrated Security=True";
 
-        private static HelperClass instance;
+        private static DAO instance;
 
-        public static HelperClass GetInstance()
+        public static DAO GetInstance()
         {
             if (instance == null)
-                instance = new HelperClass();
+                instance = new DAO();
 
             return instance;
         }

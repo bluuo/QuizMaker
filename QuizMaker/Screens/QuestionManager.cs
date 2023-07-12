@@ -4,7 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using static QuizMaker.HelperClass;
+using static QuizMaker.DAO;
+using static QuizMaker.Helper;
 
 namespace QuizMaker.Screens
 {
@@ -33,7 +34,7 @@ namespace QuizMaker.Screens
 
         public void updateQuestionListbox()
         {
-            List<Question> questionList = HelperClass.GetInstance().getAllQuestions();
+            List<Question> questionList = DAO.GetInstance().getAllQuestions();
 
             QuestionBox.Clear();
 
@@ -61,7 +62,7 @@ namespace QuizMaker.Screens
                 WrongAnswer3 = TextboxWrong3.Text,
             };
 
-            HelperClass.GetInstance().insertQuestion(question);
+            DAO.GetInstance().insertQuestion(question);
             updateQuestionListbox();
         }
 
@@ -74,7 +75,7 @@ namespace QuizMaker.Screens
                 Regex regex = new Regex(@"^\d+");
                 Match match = regex.Match(QuestionBox.SelectedItem.Text.ToString());
 
-                HelperClass.GetInstance().deleteQuestion(int.Parse(match.Value));
+                DAO.GetInstance().deleteQuestion(int.Parse(match.Value));
                 updateQuestionListbox();
             };
 
@@ -97,7 +98,7 @@ namespace QuizMaker.Screens
             Regex regex = new Regex(@"^\d+");
             Match match = regex.Match(QuestionBox.SelectedItem.Text.ToString());
 
-            Question selectedQuestion = HelperClass.GetInstance().getSingleQuestion(int.Parse(match.Value));
+            Question selectedQuestion = DAO.GetInstance().getSingleQuestion(int.Parse(match.Value));
 
             TextboxCategory.Text = selectedQuestion.Category.ToString();
             TextboxQuestion.Text = selectedQuestion.QuestionText.ToString();
