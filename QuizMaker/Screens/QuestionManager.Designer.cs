@@ -46,10 +46,7 @@
             this.QuestionBox = new MaterialSkin.Controls.MaterialListBox();
             this.TextboxCategory = new MaterialSkin.Controls.MaterialTextBox();
             this.ButtonGenerate = new MaterialSkin.Controls.MaterialButton();
-            this.fragenDB1 = new QuizMaker.FragenDB();
             this.fragenTabelleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.TextboxQuestion = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.fragenDB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fragenTabelleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -348,13 +345,10 @@
             // 
             // fragenDB1
             // 
-            this.fragenDB1.DataSetName = "FragenDB";
-            this.fragenDB1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // fragenTabelleBindingSource
             // 
             this.fragenTabelleBindingSource.DataMember = "FragenTabelle";
-            this.fragenTabelleBindingSource.DataSource = this.fragenDB1;
             // 
             // TextboxQuestion
             // 
@@ -403,7 +397,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.QuestionManager_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fragenDB1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fragenTabelleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -425,7 +418,6 @@
         private MaterialSkin.Controls.MaterialTextBox TextboxWrong3;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private MaterialSkin.Controls.MaterialButton materialButton3;
-        private FragenDB fragenDB1;
         private System.Windows.Forms.BindingSource fragenTabelleBindingSource;
         private MaterialSkin.Controls.MaterialListBox QuestionBox;
         private MaterialSkin.Controls.MaterialTextBox TextboxCategory;

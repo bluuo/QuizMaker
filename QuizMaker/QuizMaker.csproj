@@ -129,20 +129,6 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperClass.cs" />
-    <Compile Include="Fragen.cs">
-      <DependentUpon>Fragen.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Fragen.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Fragen.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\GeneratorPopup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\GeneratorPopup.Designer.cs">
-      <DependentUpon>GeneratorPopup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screens\QuestionManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,21 +179,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Screens\QuizSelector.resx">
-      <DependentUpon>QuizSelector.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="config.yaml" />
-    <None Include="Fragen.xsc">
-      <DependentUpon>Fragen.xsd</DependentUpon>
-    </None>
-    <None Include="Fragen.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Fragen.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Fragen.xss">
-      <DependentUpon>Fragen.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
@@ -235,12 +206,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Questions.mdf">
+    <Content Include="Database.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Questions_log.ldf">
+    <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Questions.mdf</DependentUpon>
+      <DependentUpon>Database.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
