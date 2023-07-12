@@ -47,6 +47,7 @@
             this.TextboxCategory = new MaterialSkin.Controls.MaterialTextBox();
             this.ButtonGenerate = new MaterialSkin.Controls.MaterialButton();
             this.fragenTabelleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TestboxQuestion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.fragenTabelleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -343,26 +344,13 @@
             this.ButtonGenerate.UseVisualStyleBackColor = true;
             this.ButtonGenerate.Click += new System.EventHandler(this.ButtonGenerate_Click);
             // 
-            // fragenDB1
+            // TestboxQuestion
             // 
-            // 
-            // fragenTabelleBindingSource
-            // 
-            this.fragenTabelleBindingSource.DataMember = "FragenTabelle";
-            // 
-            // TextboxQuestion
-            // 
-            this.TextboxQuestion.BackColor = System.Drawing.SystemColors.Window;
-            this.TextboxQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TextboxQuestion.Font = new System.Drawing.Font("Roboto Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextboxQuestion.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TextboxQuestion.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.TextboxQuestion.Location = new System.Drawing.Point(341, 111);
-            this.TextboxQuestion.Margin = new System.Windows.Forms.Padding(30);
-            this.TextboxQuestion.Multiline = true;
-            this.TextboxQuestion.Name = "TextboxQuestion";
-            this.TextboxQuestion.Size = new System.Drawing.Size(459, 52);
-            this.TextboxQuestion.TabIndex = 27;
+            this.TestboxQuestion.Location = new System.Drawing.Point(339, 112);
+            this.TestboxQuestion.Multiline = true;
+            this.TestboxQuestion.Name = "TestboxQuestion";
+            this.TestboxQuestion.Size = new System.Drawing.Size(462, 61);
+            this.TestboxQuestion.TabIndex = 27;
             // 
             // QuestionManager
             // 
@@ -370,7 +358,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 683);
             this.ControlBox = false;
-            this.Controls.Add(this.TextboxQuestion);
+            this.Controls.Add(this.TestboxQuestion);
             this.Controls.Add(this.ButtonGenerate);
             this.Controls.Add(this.TextboxCategory);
             this.Controls.Add(this.QuestionBox);
@@ -423,5 +411,6 @@
         private MaterialSkin.Controls.MaterialTextBox TextboxCategory;
         private MaterialSkin.Controls.MaterialButton ButtonGenerate;
         private System.Windows.Forms.TextBox TextboxQuestion;
+        private System.Windows.Forms.TextBox TestboxQuestion;
     }
 }
