@@ -121,14 +121,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OpenAIApiClient.cs" />
+    <Compile Include="Classes\Helper.cs" />
+    <Compile Include="Classes\OpenAIApiClient.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HelperClass.cs" />
+    <Compile Include="Classes\DAO.cs" />
+    <Compile Include="Classes\GameControler.cs" />
     <Compile Include="Screens\GeneratorPopup.cs">
       <SubType>Form</SubType>
     </Compile>

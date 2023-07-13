@@ -1,5 +1,6 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
+using QuizMaker.Screens;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,7 +58,7 @@ namespace QuizMaker
 
         public void showPlayQuiz()
         {
-            Screens.PlayQuiz playQuiz = new Screens.PlayQuiz();
+            Screens.PlayQuiz playQuiz = PlayQuiz.GetInstance();
             playQuiz.TopLevel = false;
             playQuiz.Dock = DockStyle.Fill;
             playQuiz.FormBorderStyle = FormBorderStyle.None;

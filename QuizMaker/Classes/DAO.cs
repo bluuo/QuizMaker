@@ -9,42 +9,23 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using static QuizMaker.HelperClass;
-
+using static QuizMaker.DAO;
+using static QuizMaker.Helper;
 
 namespace QuizMaker
 {
-    internal class HelperClass
+    class DAO
     {
-        public class Question
-        {
-            public int Id { get; set; }
-            public string Category { get; set; }
-            public string QuestionText { get; set; }
-            public string CorrectAnswer { get; set; }
-            public string WrongAnswer1 { get; set; }
-            public string WrongAnswer2 { get; set; }
-            public string WrongAnswer3 { get; set; }
-        }
-
-        public class Quiz
-        {
-            public int Id { get; set; }
-            public string Name { get; set; }
-            public string Category { get; set; }
-            public int Size { get; set; }
-        }
-
         private static string relativePath = "..\\..\\Database.mdf";
         private static string absolutePath = Path.GetFullPath(relativePath);
         private string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={absolutePath};Integrated Security=True";
 
-        private static HelperClass instance;
+        private static DAO instance;
 
-        public static HelperClass GetInstance()
+        public static DAO GetInstance()
         {
             if (instance == null)
-                instance = new HelperClass();
+                instance = new DAO();
 
             return instance;
         }
@@ -82,14 +63,14 @@ namespace QuizMaker
             return questionList;
         }
 
-        public List<Question> getQuestionsForQuiz(string name, String category, int size)
+        public List<Question> getQuestionsForQuiz(string name, string category, int size)
         {
             List<Question> selectedQuestions = new List<Question>();
             List<Question> filteredQuestions = new List<Question>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM QuestionsTable WHERE category = "+ category ; 
+                string query = "SELECT * FROM QuestionsTable WHERE category LIKE '"+ category +"'"; 
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -117,38 +98,6 @@ namespace QuizMaker
             filteredQuestions = selectedQuestions.Take(size).ToList();
             return filteredQuestions;
         }
-
-        public List<Quiz> getAllQuizzes()
-        {
-            List<Quiz> quizList = new List<Quiz>();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT * FROM QuizzesTable"; // Replace with your actual table name
-
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            // Retrieve values for each row
-                            Quiz quiz = new Quiz
-                            {
-                                Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
-                                Name = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-                                Category = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
-                                Size = reader.IsDBNull(3) ? 0 : reader.GetInt32(3)
-                            };
-                            quizList.Add(quiz);
-                        }
-                    }
-                }
-            }
-            return quizList;
-        }
-
         public void insertQuestion(Question question)
         {
             SqlConnection connection = new SqlConnection(connectionString);
@@ -206,10 +155,65 @@ namespace QuizMaker
             return null;
         }
 
-        public static void showMenu()
+        public List<Quiz> getAllQuizzes()
         {
-            QuizMaker.Screens.Menu Menu = new QuizMaker.Screens.Menu();
-            Menu.Show();
+            List<Quiz> quizList = new List<Quiz>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM QuizzesTable"; // Replace with your actual table name
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Retrieve values for each row
+                            Quiz quiz = new Quiz
+                            {
+                                Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
+                                Name = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                                Category = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                                Size = reader.IsDBNull(3) ? 0 : reader.GetInt32(3)
+                            };
+                            quizList.Add(quiz);
+                        }
+                    }
+                }
+            }
+            return quizList;
+        }
+
+        public Quiz getSingleQuiz(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * from QuizzesTable where id =" + id.ToString();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Quiz quiz = new Quiz
+                            {
+                                Id = reader.GetInt32(0),
+                                Name = reader.GetString(1),
+                                Category = reader.GetString(2),
+                                Size = reader.GetInt32(3)
+                            };
+
+                            return quiz;
+                        }
+                    }
+                }
+            }
+            return null;
         }
     }
 }
