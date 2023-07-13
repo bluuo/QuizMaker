@@ -28,9 +28,13 @@ namespace QuizMaker
 
                 if (result == CorrectAnswer) 
                 {
-                    
+                    MessageBox.Show("Korrekte Antwort");
                 }
-                await Task.Delay(3000);
+                else
+                {
+                    MessageBox.Show("Falsche Antwort");
+                }
+                await Task.Delay(1000);
             }
         }
     }

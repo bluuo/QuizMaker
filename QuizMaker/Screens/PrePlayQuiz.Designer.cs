@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace QuizMaker.Screens
 {
@@ -262,13 +263,9 @@ namespace QuizMaker.Screens
 
         private void materialLabel1_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
-        private void materialButton1_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         private void materialTextBox1_TextChanged(object sender, EventArgs e)
         {
