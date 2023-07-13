@@ -33,7 +33,7 @@ namespace QuizMaker
                 PlayQuiz.GetInstance().labelCurrentQ.Text = index.ToString();
                 int result = await PlayQuiz.GetInstance().showQuestion(question);
 
-                if (result == CorrectAnswer) 
+                if (result == CorrectAnswer)
                 {
                 }
                 else
