@@ -35,7 +35,7 @@ CREATE TABLE [dbo].[QuestionsTable] (
 Zweite Tabelle:
 ```
 CREATE TABLE [dbo].[QuizzesTable] (
-    [Id]       INT  NOT NULL,
+    [Id]       INT  IDENTITY (1, 1) NOT NULL,
     [name]     TEXT NULL,
     [category] TEXT NULL,
     [size]     INT  NULL,
