@@ -45,6 +45,9 @@ namespace QuizMaker.Screens
             //Screens.PlayQuiz Quiz = new Screens.PlayQuiz();
             //Quiz.Show();
             //this.Visible = false;
+
+            MainForm.GetInstance().showQuestionManager();
+            this.Visible = false;
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)

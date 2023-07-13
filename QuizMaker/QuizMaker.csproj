@@ -69,7 +69,7 @@
       <HintPath>..\packages\Npgsql.7.0.4\lib\netstandard2.0\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -137,6 +137,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Fragen.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Screens\PrePlayQuiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\PrePlayQuiz.Designer.cs">
+      <DependentUpon>PrePlayQuiz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\QuestionManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\PrePlayQuiz.resx">
+      <DependentUpon>PrePlayQuiz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\QuestionManager.resx">
       <DependentUpon>QuestionManager.cs</DependentUpon>
@@ -217,12 +226,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Questions.mdf">
+    <Content Include="Database.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Questions_log.ldf">
+    <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Questions.mdf</DependentUpon>
+      <DependentUpon>Database.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
