@@ -43,8 +43,7 @@ namespace QuizMaker.Screens
 
         private void ButtonStart_Click(object sender, EventArgs e)
         {
-
-            MainForm.GetInstance().showQuestionManager();
+            MainForm.GetInstance().showPrePlayQuiz();
             this.Visible = false;
         }
 

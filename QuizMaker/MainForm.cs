@@ -83,15 +83,15 @@ namespace QuizMaker
         public void showPrePlayQuiz()
         {
             //toDO
-            Screens.QuestionManager questionManager = new Screens.QuestionManager();
-            questionManager.TopLevel = false;
-            questionManager.Dock = DockStyle.Fill;
-            questionManager.FormBorderStyle = FormBorderStyle.None;
+            Screens.PrePlayQuiz prePlayQuiz = new Screens.PrePlayQuiz();
+            prePlayQuiz.TopLevel = false;
+            prePlayQuiz.Dock = DockStyle.Fill;
+            prePlayQuiz.FormBorderStyle = FormBorderStyle.None;
 
             //toDO
             mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(questionManager);
-            questionManager.Show();
+            mainPanel.Controls.Add(prePlayQuiz);
+            prePlayQuiz.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

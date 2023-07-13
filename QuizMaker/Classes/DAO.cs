@@ -215,5 +215,18 @@ namespace QuizMaker
             }
             return null;
         }
+
+        public void insertQuiz(Quiz quiz)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = connection.CreateCommand();
+            connection.Open();
+            command.CommandText =
+                "Insert into QuizzesTable(name, category, size) " +
+                "VALUES ('" + quiz.Name + "', '" + quiz.Category + "', '" + quiz.Size + "')";
+            command.Connection = connection;
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
     }
 }
