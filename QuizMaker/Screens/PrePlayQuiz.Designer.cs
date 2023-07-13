@@ -1,4 +1,6 @@
-﻿namespace QuizMaker.Screens
+﻿using System;
+
+namespace QuizMaker.Screens
 {
     partial class PrePlayQuiz
     {
@@ -114,6 +116,21 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void materialTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

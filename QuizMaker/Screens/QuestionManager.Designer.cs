@@ -1,4 +1,7 @@
-﻿namespace QuizMaker.Screens
+﻿using MaterialSkin;
+using System;
+
+namespace QuizMaker.Screens
 {
     partial class QuestionManager
     {
@@ -259,16 +262,16 @@
             // TextboxQuestion
             // 
             this.TextboxQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TextboxQuestion.AnimateReadOnly = false;
+            //this.TextboxQuestion.AnimateReadOnly = false;
             this.TextboxQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.TextboxQuestion.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.TextboxQuestion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextboxQuestion.Depth = 0;
+            //this.TextboxQuestion.Depth = 0;
             this.TextboxQuestion.HideSelection = true;
             this.TextboxQuestion.Location = new System.Drawing.Point(452, 144);
             this.TextboxQuestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TextboxQuestion.MaxLength = 32767;
-            this.TextboxQuestion.MouseState = MaterialSkin.MouseState.OUT;
+            //this.TextboxQuestion.MouseState = MaterialSkin.MouseState.OUT;
             this.TextboxQuestion.Name = "TextboxQuestion";
             this.TextboxQuestion.PasswordChar = '\0';
             this.TextboxQuestion.ReadOnly = false;
@@ -432,6 +435,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void QuestionBox_SelectedIndexChanged(object sender, MaterialListBoxItem selectedItem)
+        {
+           
         }
 
         #endregion
