@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace QuizMaker.Screens
 {
@@ -55,7 +56,7 @@ namespace QuizMaker.Screens
             this.QuizBox.Name = "QuizBox";
             this.QuizBox.SelectedIndex = -1;
             this.QuizBox.SelectedItem = null;
-            this.QuizBox.Size = new System.Drawing.Size(367, 520);
+            this.QuizBox.Size = new System.Drawing.Size(367, 450);
             this.QuizBox.TabIndex = 0;
             this.QuizBox.SelectedIndexChanged += new MaterialSkin.Controls.MaterialListBox.SelectedIndexChangedEventHandler(this.materialListBox1_SelectedIndexChanged);
             // 
@@ -66,7 +67,7 @@ namespace QuizMaker.Screens
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(696, 626);
+            this.materialButton1.Location = new System.Drawing.Point(685, 545);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -201,7 +202,7 @@ namespace QuizMaker.Screens
             this.ButtonDelete.Depth = 0;
             this.ButtonDelete.HighEmphasis = true;
             this.ButtonDelete.Icon = null;
-            this.ButtonDelete.Location = new System.Drawing.Point(136, 626);
+            this.ButtonDelete.Location = new System.Drawing.Point(142, 545);
             this.ButtonDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ButtonDelete.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonDelete.Name = "ButtonDelete";
@@ -236,7 +237,7 @@ namespace QuizMaker.Screens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 684);
+            this.ClientSize = new System.Drawing.Size(824, 600);
             this.Controls.Add(this.ButtonBack);
             this.Controls.Add(this.ButtonDelete);
             this.Controls.Add(this.ButtonAdd);
@@ -262,13 +263,9 @@ namespace QuizMaker.Screens
 
         private void materialLabel1_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
-        private void materialButton1_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         private void materialTextBox1_TextChanged(object sender, EventArgs e)
         {

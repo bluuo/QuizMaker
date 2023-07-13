@@ -22,16 +22,27 @@ namespace QuizMaker
         {
             List<Question> questions = DAO.GetInstance().getQuestionsForQuiz(currentQuiz.Name, currentQuiz.Category, currentQuiz.Size);
 
+            int index = 0;
+            PlayQuiz.GetInstance().ProgressBar.Maximum = questions.Count();
+            PlayQuiz.GetInstance().labelQCount.Text = questions.Count().ToString();
             foreach (Question question in questions)
             {
+                PlayQuiz.GetInstance().ProgressBar.Select();
+                index++;
+                PlayQuiz.GetInstance().ProgressBar.Value = index;
+                PlayQuiz.GetInstance().labelCurrentQ.Text = index.ToString();
                 int result = await PlayQuiz.GetInstance().showQuestion(question);
 
-                if (result == CorrectAnswer) 
+                if (result == CorrectAnswer)
                 {
-                    
                 }
-                await Task.Delay(3000);
+                else
+                {
+                }
+                await Task.Delay(500);
+                PlayQuiz.GetInstance().setButtonsDesign();
             }
+            MainForm.GetInstance().showMenu();
         }
     }
 }

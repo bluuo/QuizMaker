@@ -70,7 +70,11 @@ namespace QuizMaker
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM QuestionsTable WHERE category LIKE '"+ category +"'"; 
+                string query;
+                if (string.IsNullOrEmpty(category))
+                    query = "SELECT * FROM QuestionsTable";
+                else
+                    query = "SELECT * FROM QuestionsTable WHERE category LIKE '" + category + "'";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -105,7 +109,7 @@ namespace QuizMaker
             connection.Open();
             command.CommandText =
                 "Insert into QuestionsTable(category, question, answer_correct, answer_wrong1, answer_wrong2, answer_wrong3) " +
-                "VALUES ('" + question.Category+ "', '" + question.QuestionText + "', '" + question.CorrectAnswer + "', '" + question.WrongAnswer1 + "', '" + question.WrongAnswer2 + "', '" + question.WrongAnswer3 + "')";
+                "VALUES ('" + question.Category + "', '" + question.QuestionText + "', '" + question.CorrectAnswer + "', '" + question.WrongAnswer1 + "', '" + question.WrongAnswer2 + "', '" + question.WrongAnswer3 + "')";
             command.Connection = connection;
             command.ExecuteNonQuery();
             connection.Close();

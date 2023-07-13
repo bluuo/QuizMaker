@@ -75,5 +75,19 @@ namespace QuizMaker.Screens
             DAO.GetInstance().insertQuiz(quiz);
             updateQuestionListbox();
         }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            if (QuizBox.SelectedIndex == -1) //no selection
+                MessageBox.Show("Bitte wählen Sie ein Quiz aus!");
+            else
+            {
+                Regex regex = new Regex(@"^\d+");
+                Match match = regex.Match(QuizBox.SelectedItem.Text.ToString());
+  
+                GameControler gameControler = new GameControler(Int32.Parse(match.Value));
+                gameControler.startQuiz();
+            };
+        }
     }
 }
