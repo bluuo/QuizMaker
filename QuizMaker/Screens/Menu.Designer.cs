@@ -30,7 +30,6 @@
         {
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.ButtonStart = new MaterialSkin.Controls.MaterialButton();
-            this.ButtonQuizManager = new MaterialSkin.Controls.MaterialButton();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.ButtonExit = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
@@ -74,27 +73,6 @@
             this.ButtonStart.UseVisualStyleBackColor = true;
             this.ButtonStart.Click += new System.EventHandler(this.ButtonStart_Click);
             // 
-            // ButtonQuizManager
-            // 
-            this.ButtonQuizManager.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ButtonQuizManager.AutoSize = false;
-            this.ButtonQuizManager.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonQuizManager.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.ButtonQuizManager.Depth = 0;
-            this.ButtonQuizManager.HighEmphasis = true;
-            this.ButtonQuizManager.Icon = null;
-            this.ButtonQuizManager.Location = new System.Drawing.Point(70, 177);
-            this.ButtonQuizManager.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.ButtonQuizManager.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ButtonQuizManager.Name = "ButtonQuizManager";
-            this.ButtonQuizManager.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.ButtonQuizManager.Size = new System.Drawing.Size(161, 50);
-            this.ButtonQuizManager.TabIndex = 2;
-            this.ButtonQuizManager.Text = "Quiz verwalten";
-            this.ButtonQuizManager.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.ButtonQuizManager.UseAccentColor = false;
-            this.ButtonQuizManager.UseVisualStyleBackColor = true;
-            // 
             // materialButton2
             // 
             this.materialButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -105,7 +83,7 @@
             this.materialButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.materialButton2.HighEmphasis = true;
             this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(70, 239);
+            this.materialButton2.Location = new System.Drawing.Point(70, 177);
             this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton2.Name = "materialButton2";
@@ -167,7 +145,6 @@
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.ButtonExit);
             this.Controls.Add(this.materialButton2);
-            this.Controls.Add(this.ButtonQuizManager);
             this.Controls.Add(this.ButtonStart);
             this.Controls.Add(this.materialLabel1);
             this.DrawerHighlightWithAccent = false;
@@ -192,7 +169,6 @@
 
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialButton ButtonStart;
-        private MaterialSkin.Controls.MaterialButton ButtonQuizManager;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialButton ButtonExit;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;

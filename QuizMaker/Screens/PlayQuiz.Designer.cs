@@ -29,22 +29,25 @@
         private void InitializeComponent()
         {
             this.LabelFrage = new MaterialSkin.Controls.MaterialLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Antwort_D = new MaterialSkin.Controls.MaterialButton();
-            this.Antwort_C = new MaterialSkin.Controls.MaterialButton();
-            this.Antwort_B = new MaterialSkin.Controls.MaterialButton();
-            this.Antwort_A = new MaterialSkin.Controls.MaterialButton();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            this.groupBox1.SuspendLayout();
+            this.ProgressBar = new MaterialSkin.Controls.MaterialProgressBar();
+            this.labelCurrentQ = new MaterialSkin.Controls.MaterialLabel();
+            this.labelQCount = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.Antwort_A = new System.Windows.Forms.Button();
+            this.Antwort_B = new System.Windows.Forms.Button();
+            this.Antwort_C = new System.Windows.Forms.Button();
+            this.Antwort_D = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelFrage
             // 
             this.LabelFrage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LabelFrage.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.LabelFrage.Depth = 0;
             this.LabelFrage.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.LabelFrage.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
-            this.LabelFrage.Location = new System.Drawing.Point(6, 65);
+            this.LabelFrage.Location = new System.Drawing.Point(6, 83);
             this.LabelFrage.MouseState = MaterialSkin.MouseState.HOVER;
             this.LabelFrage.Name = "LabelFrage";
             this.LabelFrage.Size = new System.Drawing.Size(597, 147);
@@ -52,110 +55,6 @@
             this.LabelFrage.Text = "Fragetext";
             this.LabelFrage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelFrage.Click += new System.EventHandler(this.materialLabel1_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.Antwort_D);
-            this.groupBox1.Controls.Add(this.Antwort_C);
-            this.groupBox1.Controls.Add(this.Antwort_B);
-            this.groupBox1.Controls.Add(this.Antwort_A);
-            this.groupBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(21, 268);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(568, 230);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            // 
-            // Antwort_D
-            // 
-            this.Antwort_D.AutoSize = false;
-            this.Antwort_D.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Antwort_D.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.Antwort_D.Depth = 0;
-            this.Antwort_D.HighEmphasis = true;
-            this.Antwort_D.Icon = null;
-            this.Antwort_D.Location = new System.Drawing.Point(301, 130);
-            this.Antwort_D.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Antwort_D.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Antwort_D.Name = "Antwort_D";
-            this.Antwort_D.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.Antwort_D.Size = new System.Drawing.Size(254, 78);
-            this.Antwort_D.TabIndex = 10;
-            this.Antwort_D.Text = "Antwort_D";
-            this.Antwort_D.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.Antwort_D.UseAccentColor = false;
-            this.Antwort_D.UseVisualStyleBackColor = true;
-            this.Antwort_D.Click += new System.EventHandler(this.Antwort_D_Click);
-            // 
-            // Antwort_C
-            // 
-            this.Antwort_C.AutoSize = false;
-            this.Antwort_C.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Antwort_C.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.Antwort_C.Depth = 0;
-            this.Antwort_C.HighEmphasis = true;
-            this.Antwort_C.Icon = null;
-            this.Antwort_C.Location = new System.Drawing.Point(7, 130);
-            this.Antwort_C.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Antwort_C.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Antwort_C.Name = "Antwort_C";
-            this.Antwort_C.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.Antwort_C.Size = new System.Drawing.Size(254, 78);
-            this.Antwort_C.TabIndex = 9;
-            this.Antwort_C.Text = "Antwort_C";
-            this.Antwort_C.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.Antwort_C.UseAccentColor = false;
-            this.Antwort_C.UseVisualStyleBackColor = true;
-            this.Antwort_C.Click += new System.EventHandler(this.Antwort_C_Click);
-            // 
-            // Antwort_B
-            // 
-            this.Antwort_B.AutoSize = false;
-            this.Antwort_B.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Antwort_B.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.Antwort_B.Depth = 0;
-            this.Antwort_B.HighEmphasis = true;
-            this.Antwort_B.Icon = null;
-            this.Antwort_B.Location = new System.Drawing.Point(301, 22);
-            this.Antwort_B.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Antwort_B.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Antwort_B.Name = "Antwort_B";
-            this.Antwort_B.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.Antwort_B.Size = new System.Drawing.Size(254, 78);
-            this.Antwort_B.TabIndex = 8;
-            this.Antwort_B.Text = "Antwort_B";
-            this.Antwort_B.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.Antwort_B.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.Antwort_B.UseAccentColor = false;
-            this.Antwort_B.UseVisualStyleBackColor = true;
-            this.Antwort_B.Click += new System.EventHandler(this.Antwort_B_Click);
-            // 
-            // Antwort_A
-            // 
-            this.Antwort_A.AutoSize = false;
-            this.Antwort_A.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Antwort_A.BackColor = System.Drawing.Color.Yellow;
-            this.Antwort_A.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.Antwort_A.Depth = 0;
-            this.Antwort_A.FlatAppearance.BorderSize = 0;
-            this.Antwort_A.HighEmphasis = true;
-            this.Antwort_A.Icon = null;
-            this.Antwort_A.Location = new System.Drawing.Point(7, 22);
-            this.Antwort_A.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Antwort_A.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Antwort_A.Name = "Antwort_A";
-            this.Antwort_A.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.Antwort_A.Size = new System.Drawing.Size(254, 78);
-            this.Antwort_A.TabIndex = 7;
-            this.Antwort_A.Text = "Antwort_A";
-            this.Antwort_A.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.Antwort_A.UseAccentColor = false;
-            this.Antwort_A.UseVisualStyleBackColor = false;
-            this.Antwort_A.Click += new System.EventHandler(this.Antwort_A_Click);
             // 
             // materialButton3
             // 
@@ -180,6 +79,121 @@
             this.materialButton3.UseVisualStyleBackColor = true;
             this.materialButton3.Click += new System.EventHandler(this.materialButton3_Click);
             // 
+            // ProgressBar
+            // 
+            this.ProgressBar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ProgressBar.Depth = 0;
+            this.ProgressBar.Location = new System.Drawing.Point(190, 57);
+            this.ProgressBar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.Size = new System.Drawing.Size(229, 5);
+            this.ProgressBar.TabIndex = 11;
+            this.ProgressBar.Click += new System.EventHandler(this.ProgressBar_Click);
+            // 
+            // labelCurrentQ
+            // 
+            this.labelCurrentQ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelCurrentQ.AutoSize = true;
+            this.labelCurrentQ.Depth = 0;
+            this.labelCurrentQ.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelCurrentQ.Location = new System.Drawing.Point(285, 30);
+            this.labelCurrentQ.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelCurrentQ.Name = "labelCurrentQ";
+            this.labelCurrentQ.Size = new System.Drawing.Size(10, 19);
+            this.labelCurrentQ.TabIndex = 12;
+            this.labelCurrentQ.Text = "0";
+            this.labelCurrentQ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelQCount
+            // 
+            this.labelQCount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelQCount.AutoSize = true;
+            this.labelQCount.Depth = 0;
+            this.labelQCount.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelQCount.Location = new System.Drawing.Point(314, 30);
+            this.labelQCount.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelQCount.Name = "labelQCount";
+            this.labelQCount.Size = new System.Drawing.Size(10, 19);
+            this.labelQCount.TabIndex = 13;
+            this.labelQCount.Text = "0";
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(301, 30);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(8, 19);
+            this.materialLabel1.TabIndex = 14;
+            this.materialLabel1.Text = "/";
+            // 
+            // Antwort_A
+            // 
+            this.Antwort_A.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Antwort_A.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Antwort_A.FlatAppearance.BorderSize = 0;
+            this.Antwort_A.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Antwort_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Antwort_A.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Antwort_A.Location = new System.Drawing.Point(21, 299);
+            this.Antwort_A.Name = "Antwort_A";
+            this.Antwort_A.Size = new System.Drawing.Size(254, 85);
+            this.Antwort_A.TabIndex = 15;
+            this.Antwort_A.Text = "button1";
+            this.Antwort_A.UseVisualStyleBackColor = false;
+            this.Antwort_A.Click += new System.EventHandler(this.Antwort_A_Click_1);
+            // 
+            // Antwort_B
+            // 
+            this.Antwort_B.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Antwort_B.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Antwort_B.FlatAppearance.BorderSize = 0;
+            this.Antwort_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Antwort_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Antwort_B.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Antwort_B.Location = new System.Drawing.Point(333, 299);
+            this.Antwort_B.Name = "Antwort_B";
+            this.Antwort_B.Size = new System.Drawing.Size(254, 85);
+            this.Antwort_B.TabIndex = 16;
+            this.Antwort_B.Text = "button1";
+            this.Antwort_B.UseVisualStyleBackColor = false;
+            this.Antwort_B.Click += new System.EventHandler(this.Antwort_B_Click_1);
+            // 
+            // Antwort_C
+            // 
+            this.Antwort_C.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Antwort_C.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Antwort_C.FlatAppearance.BorderSize = 0;
+            this.Antwort_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Antwort_C.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Antwort_C.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Antwort_C.Location = new System.Drawing.Point(21, 418);
+            this.Antwort_C.Name = "Antwort_C";
+            this.Antwort_C.Size = new System.Drawing.Size(254, 85);
+            this.Antwort_C.TabIndex = 17;
+            this.Antwort_C.Text = "button1";
+            this.Antwort_C.UseVisualStyleBackColor = false;
+            this.Antwort_C.Click += new System.EventHandler(this.Antwort_C_Click_1);
+            // 
+            // Antwort_D
+            // 
+            this.Antwort_D.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Antwort_D.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Antwort_D.FlatAppearance.BorderSize = 0;
+            this.Antwort_D.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Antwort_D.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Antwort_D.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Antwort_D.Location = new System.Drawing.Point(333, 418);
+            this.Antwort_D.Name = "Antwort_D";
+            this.Antwort_D.Size = new System.Drawing.Size(254, 85);
+            this.Antwort_D.TabIndex = 18;
+            this.Antwort_D.Text = "button1";
+            this.Antwort_D.UseVisualStyleBackColor = false;
+            this.Antwort_D.Click += new System.EventHandler(this.Antwort_D_Click_1);
+            // 
             // PlayQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,15 +201,22 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(609, 520);
+            this.Controls.Add(this.Antwort_D);
+            this.Controls.Add(this.Antwort_C);
+            this.Controls.Add(this.Antwort_B);
+            this.Controls.Add(this.Antwort_A);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.labelQCount);
+            this.Controls.Add(this.labelCurrentQ);
+            this.Controls.Add(this.ProgressBar);
             this.Controls.Add(this.materialButton3);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LabelFrage);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
             this.Name = "PlayQuiz";
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,11 +225,14 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialLabel LabelFrage;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private MaterialSkin.Controls.MaterialButton Antwort_A;
-        private MaterialSkin.Controls.MaterialButton Antwort_D;
-        private MaterialSkin.Controls.MaterialButton Antwort_C;
-        private MaterialSkin.Controls.MaterialButton Antwort_B;
         private MaterialSkin.Controls.MaterialButton materialButton3;
+        public MaterialSkin.Controls.MaterialProgressBar ProgressBar;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        public MaterialSkin.Controls.MaterialLabel labelCurrentQ;
+        public MaterialSkin.Controls.MaterialLabel labelQCount;
+        private System.Windows.Forms.Button Antwort_A;
+        private System.Windows.Forms.Button Antwort_B;
+        private System.Windows.Forms.Button Antwort_C;
+        private System.Windows.Forms.Button Antwort_D;
     }
 }

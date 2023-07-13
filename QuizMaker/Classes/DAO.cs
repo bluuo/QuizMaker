@@ -70,7 +70,11 @@ namespace QuizMaker
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM QuestionsTable WHERE category LIKE '"+ category +"'"; 
+                string query;
+                if (string.IsNullOrEmpty(category))
+                    query = "SELECT * FROM QuestionsTable";
+                else
+                    query = "SELECT * FROM QuestionsTable WHERE category LIKE '"+ category +"'"; 
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
