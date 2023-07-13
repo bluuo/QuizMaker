@@ -121,21 +121,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OpenAIApiClient.cs" />
+    <Compile Include="Classes\Helper.cs" />
+    <Compile Include="Classes\OpenAIApiClient.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HelperClass.cs" />
-    <Compile Include="Fragen.cs">
-      <DependentUpon>Fragen.xsd</DependentUpon>
+    <Compile Include="Classes\DAO.cs" />
+    <Compile Include="Classes\GameControler.cs" />
+    <Compile Include="Screens\GeneratorPopup.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fragen.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Fragen.xsd</DependentUpon>
+    <Compile Include="Screens\GeneratorPopup.Designer.cs">
+      <DependentUpon>GeneratorPopup.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\PrePlayQuiz.cs">
       <SubType>Form</SubType>
@@ -163,11 +163,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\QuizSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\QuizSelector.Designer.cs">
+      <DependentUpon>QuizSelector.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\PrePlayQuiz.resx">
       <DependentUpon>PrePlayQuiz.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\GeneratorPopup.resx">
+      <DependentUpon>GeneratorPopup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\QuestionManager.resx">
       <DependentUpon>QuestionManager.cs</DependentUpon>
@@ -188,17 +196,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="config.yaml" />
-    <None Include="Fragen.xsc">
-      <DependentUpon>Fragen.xsd</DependentUpon>
-    </None>
-    <None Include="Fragen.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Fragen.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Fragen.xss">
-      <DependentUpon>Fragen.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
@@ -216,7 +213,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.8 %28x86 und x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

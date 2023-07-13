@@ -32,6 +32,16 @@ CREATE TABLE [dbo].[QuestionsTable] (
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 ```
+Zweite Tabelle:
+```
+CREATE TABLE [dbo].[QuizzesTable] (
+    [Id]       INT  NOT NULL,
+    [name]     TEXT NULL,
+    [category] TEXT NULL,
+    [size]     INT  NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+```
 
 ![2023-07-06 14_32_44-Window](https://github.com/bluuo/QuizMaker/blob/117e5d6cebd0369387eba289968238f3a3050b11/misc/2023-07-06%2014_32_44-Window.png)
 

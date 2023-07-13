@@ -9,13 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static QuizMaker.Helper;
 
 namespace QuizMaker.Screens
 {
-    public partial class Menu : MaterialForm
+    public partial class QuizSelector : MaterialForm
     {
-        public Menu()
+        public QuizSelector()
         {
             InitializeComponent();
 
@@ -28,35 +27,6 @@ namespace QuizMaker.Screens
                  Primary.Grey500,
                  Accent.LightBlue700,
                  TextShade.WHITE);
-
-        }
-
-        private void Menu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonStart_Click(object sender, EventArgs e)
-        {
-
-            MainForm.GetInstance().showQuestionManager();
-            this.Visible = false;
-        }
-
-        private void ButtonExit_Click(object sender, EventArgs e)
-        {
-            MainForm.GetInstance().Close();
-        }
-
-        private void materialButton2_Click(object sender, EventArgs e)
-        {
-            MainForm.GetInstance().showQuestionManager();
-            this.Visible = false;
         }
     }
 }
