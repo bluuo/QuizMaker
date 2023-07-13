@@ -43,10 +43,9 @@ namespace QuizMaker.Screens
 
         private void ButtonStart_Click(object sender, EventArgs e)
         {
-            MainForm.GetInstance().showPlayQuiz();
 
-            GameControler gameControler = new GameControler(1);
-            gameControler.startQuiz();
+            MainForm.GetInstance().showQuestionManager();
+            this.Visible = false;
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)

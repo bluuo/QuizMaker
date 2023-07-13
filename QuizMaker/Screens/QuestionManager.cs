@@ -11,6 +11,14 @@ namespace QuizMaker.Screens
 {
     public partial class QuestionManager : MaterialForm
     {
+
+        //private string connectionString = Properties.Settings.Default.dbConnection;
+
+        private static string relativePath = "..\\..\\Database.mdf";
+        private static string absolutePath = Path.GetFullPath(relativePath);
+        private string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={absolutePath};Integrated Security=True";
+
+
         public QuestionManager()
         {
             InitializeComponent();
@@ -112,5 +120,7 @@ namespace QuizMaker.Screens
         {
 
         }
+
+        
     }
 }
