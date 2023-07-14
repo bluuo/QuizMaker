@@ -230,6 +230,7 @@ namespace QuizMaker.Screens
             this.ButtonBack.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.ButtonBack.UseAccentColor = false;
             this.ButtonBack.UseVisualStyleBackColor = true;
+            this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
             // PrePlayQuiz
             // 
