@@ -50,13 +50,13 @@ namespace QuizMaker.Screens
             this.QuizBox.BorderColor = System.Drawing.Color.LightGray;
             this.QuizBox.Depth = 0;
             this.QuizBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.QuizBox.Location = new System.Drawing.Point(23, 88);
-            this.QuizBox.Margin = new System.Windows.Forms.Padding(2);
+            this.QuizBox.Location = new System.Drawing.Point(31, 108);
+            this.QuizBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QuizBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.QuizBox.Name = "QuizBox";
             this.QuizBox.SelectedIndex = -1;
             this.QuizBox.SelectedItem = null;
-            this.QuizBox.Size = new System.Drawing.Size(367, 450);
+            this.QuizBox.Size = new System.Drawing.Size(489, 554);
             this.QuizBox.TabIndex = 0;
             this.QuizBox.SelectedIndexChanged += new MaterialSkin.Controls.MaterialListBox.SelectedIndexChangedEventHandler(this.materialListBox1_SelectedIndexChanged);
             // 
@@ -67,8 +67,8 @@ namespace QuizMaker.Screens
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(685, 545);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.materialButton1.Location = new System.Drawing.Point(913, 671);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -87,13 +87,13 @@ namespace QuizMaker.Screens
             this.TextboxName.Depth = 0;
             this.TextboxName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxName.LeadingIcon = null;
-            this.TextboxName.Location = new System.Drawing.Point(562, 93);
-            this.TextboxName.Margin = new System.Windows.Forms.Padding(2);
+            this.TextboxName.Location = new System.Drawing.Point(749, 114);
+            this.TextboxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextboxName.MaxLength = 50;
             this.TextboxName.MouseState = MaterialSkin.MouseState.OUT;
             this.TextboxName.Multiline = false;
             this.TextboxName.Name = "TextboxName";
-            this.TextboxName.Size = new System.Drawing.Size(229, 50);
+            this.TextboxName.Size = new System.Drawing.Size(305, 50);
             this.TextboxName.TabIndex = 3;
             this.TextboxName.Text = "";
             this.TextboxName.TrailingIcon = null;
@@ -104,8 +104,7 @@ namespace QuizMaker.Screens
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(411, 108);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel1.Location = new System.Drawing.Point(548, 133);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(43, 19);
@@ -118,8 +117,7 @@ namespace QuizMaker.Screens
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(411, 188);
-            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel2.Location = new System.Drawing.Point(548, 231);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(129, 19);
@@ -133,13 +131,13 @@ namespace QuizMaker.Screens
             this.TextboxAnzahl.Depth = 0;
             this.TextboxAnzahl.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxAnzahl.LeadingIcon = null;
-            this.TextboxAnzahl.Location = new System.Drawing.Point(562, 173);
-            this.TextboxAnzahl.Margin = new System.Windows.Forms.Padding(2);
+            this.TextboxAnzahl.Location = new System.Drawing.Point(749, 213);
+            this.TextboxAnzahl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextboxAnzahl.MaxLength = 50;
             this.TextboxAnzahl.MouseState = MaterialSkin.MouseState.OUT;
             this.TextboxAnzahl.Multiline = false;
             this.TextboxAnzahl.Name = "TextboxAnzahl";
-            this.TextboxAnzahl.Size = new System.Drawing.Size(229, 50);
+            this.TextboxAnzahl.Size = new System.Drawing.Size(305, 50);
             this.TextboxAnzahl.TabIndex = 5;
             this.TextboxAnzahl.Text = "";
             this.TextboxAnzahl.TrailingIcon = null;
@@ -149,8 +147,7 @@ namespace QuizMaker.Screens
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(411, 266);
-            this.materialLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.materialLabel3.Location = new System.Drawing.Point(548, 327);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(68, 19);
@@ -164,13 +161,13 @@ namespace QuizMaker.Screens
             this.TextboxKategorie.Depth = 0;
             this.TextboxKategorie.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxKategorie.LeadingIcon = null;
-            this.TextboxKategorie.Location = new System.Drawing.Point(562, 251);
-            this.TextboxKategorie.Margin = new System.Windows.Forms.Padding(2);
+            this.TextboxKategorie.Location = new System.Drawing.Point(749, 309);
+            this.TextboxKategorie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextboxKategorie.MaxLength = 50;
             this.TextboxKategorie.MouseState = MaterialSkin.MouseState.OUT;
             this.TextboxKategorie.Multiline = false;
             this.TextboxKategorie.Name = "TextboxKategorie";
-            this.TextboxKategorie.Size = new System.Drawing.Size(229, 50);
+            this.TextboxKategorie.Size = new System.Drawing.Size(305, 50);
             this.TextboxKategorie.TabIndex = 7;
             this.TextboxKategorie.Text = "";
             this.TextboxKategorie.TrailingIcon = null;
@@ -182,8 +179,8 @@ namespace QuizMaker.Screens
             this.ButtonAdd.Depth = 0;
             this.ButtonAdd.HighEmphasis = true;
             this.ButtonAdd.Icon = null;
-            this.ButtonAdd.Location = new System.Drawing.Point(552, 325);
-            this.ButtonAdd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ButtonAdd.Location = new System.Drawing.Point(736, 400);
+            this.ButtonAdd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonAdd.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonAdd.Name = "ButtonAdd";
             this.ButtonAdd.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -202,8 +199,8 @@ namespace QuizMaker.Screens
             this.ButtonDelete.Depth = 0;
             this.ButtonDelete.HighEmphasis = true;
             this.ButtonDelete.Icon = null;
-            this.ButtonDelete.Location = new System.Drawing.Point(142, 545);
-            this.ButtonDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ButtonDelete.Location = new System.Drawing.Point(189, 671);
+            this.ButtonDelete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonDelete.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonDelete.Name = "ButtonDelete";
             this.ButtonDelete.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -213,6 +210,7 @@ namespace QuizMaker.Screens
             this.ButtonDelete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.ButtonDelete.UseAccentColor = false;
             this.ButtonDelete.UseVisualStyleBackColor = true;
+            this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
             // ButtonBack
             // 
@@ -221,8 +219,8 @@ namespace QuizMaker.Screens
             this.ButtonBack.Depth = 0;
             this.ButtonBack.HighEmphasis = true;
             this.ButtonBack.Icon = null;
-            this.ButtonBack.Location = new System.Drawing.Point(23, 22);
-            this.ButtonBack.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ButtonBack.Location = new System.Drawing.Point(31, 27);
+            this.ButtonBack.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonBack.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonBack.Name = "ButtonBack";
             this.ButtonBack.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -232,12 +230,13 @@ namespace QuizMaker.Screens
             this.ButtonBack.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.ButtonBack.UseAccentColor = false;
             this.ButtonBack.UseVisualStyleBackColor = true;
+            this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
             // PrePlayQuiz
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 600);
+            this.ClientSize = new System.Drawing.Size(1099, 738);
             this.Controls.Add(this.ButtonBack);
             this.Controls.Add(this.ButtonDelete);
             this.Controls.Add(this.ButtonAdd);
@@ -250,9 +249,9 @@ namespace QuizMaker.Screens
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.QuizBox);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PrePlayQuiz";
-            this.Padding = new System.Windows.Forms.Padding(3, 0, 2, 2);
+            this.Padding = new System.Windows.Forms.Padding(4, 0, 3, 2);
             this.Sizable = false;
             this.Text = "PrePlayQuiz";
             this.Load += new System.EventHandler(this.PrePlayQuiz_Load);

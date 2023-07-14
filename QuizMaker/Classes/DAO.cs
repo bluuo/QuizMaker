@@ -232,5 +232,16 @@ namespace QuizMaker
             command.ExecuteNonQuery();
             connection.Close();
         }
+
+        public void deleteQuiz(int id)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = connection.CreateCommand();
+            connection.Open();
+            command.CommandText = "DELETE from QuizzesTable where id =" + id;
+            command.Connection = connection;
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
     }
 }
