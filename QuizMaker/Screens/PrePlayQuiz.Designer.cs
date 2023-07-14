@@ -59,6 +59,7 @@ namespace QuizMaker.Screens
             this.QuizBox.Size = new System.Drawing.Size(489, 554);
             this.QuizBox.TabIndex = 0;
             this.QuizBox.SelectedIndexChanged += new MaterialSkin.Controls.MaterialListBox.SelectedIndexChangedEventHandler(this.materialListBox1_SelectedIndexChanged);
+            this.QuizBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.QuizBox_MouseDoubleClick_1);
             // 
             // materialButton1
             // 

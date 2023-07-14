@@ -33,12 +33,6 @@ namespace QuizMaker.Screens
                  Accent.LightBlue700,
                  TextShade.WHITE);
         }
-        private void QuestionBox_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-
         private void materialListBox1_SelectedIndexChanged(object sender, MaterialListBoxItem selectedItem)
         {
 
@@ -113,6 +107,16 @@ namespace QuizMaker.Screens
         {
             MainForm.GetInstance().showMenu();
             this.Visible = false;
+        }
+
+        private void QuizBox_MouseDoubleClick_1(object sender, MouseEventArgs e)
+        {
+            Regex regex = new Regex(@"^\d+");
+            Match match = regex.Match(QuizBox.SelectedItem.Text.ToString());
+
+            GameControler gameControler = new GameControler(Int32.Parse(match.Value));
+            gameControler.startQuiz();
+
         }
     }
 }
