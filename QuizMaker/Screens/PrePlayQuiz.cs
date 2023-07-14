@@ -89,5 +89,20 @@ namespace QuizMaker.Screens
                 gameControler.startQuiz();
             };
         }
+
+        private void ButtonDelete_Click(object sender, EventArgs e)
+        {
+            if (QuizBox.SelectedIndex == -1) //no selection
+                MessageBox.Show("Bitte wählen Sie eine Frage aus!");
+            else
+            {
+                Regex regex = new Regex(@"^\d+");
+                Match match = regex.Match(QuizBox.SelectedItem.Text.ToString());
+
+                DAO.GetInstance().deleteQuiz(int.Parse(match.Value));
+                updateQuestionListbox();
+            };
+
+        }
     }
 }
