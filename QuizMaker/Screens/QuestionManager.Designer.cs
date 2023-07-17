@@ -336,7 +336,7 @@ namespace QuizMaker.Screens
             // 
             // ButtonGenerate
             // 
-            this.ButtonGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonGenerate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ButtonGenerate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonGenerate.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.ButtonGenerate.Depth = 0;
@@ -361,7 +361,7 @@ namespace QuizMaker.Screens
             this.TextboxQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.TextboxQuestion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TextboxQuestion.Location = new System.Drawing.Point(447, 137);
-            this.TextboxQuestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextboxQuestion.Margin = new System.Windows.Forms.Padding(4);
             this.TextboxQuestion.Multiline = true;
             this.TextboxQuestion.Name = "TextboxQuestion";
             this.TextboxQuestion.Size = new System.Drawing.Size(463, 61);
@@ -394,10 +394,10 @@ namespace QuizMaker.Screens
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.StatusAndActionBar_None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "QuestionManager";
-            this.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Padding = new System.Windows.Forms.Padding(4);
             this.Sizable = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
