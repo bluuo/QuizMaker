@@ -7,9 +7,7 @@ using System.Collections.Generic;
 
 public class OpenAIGptClient
 { 
-
     private const string GptEndpointUrl = "https://api.openai.com/v1/chat/completions";
-
     public string SendApiRequest(string message)
     {
         // Load the YAML configuration
@@ -17,10 +15,8 @@ public class OpenAIGptClient
         var filePath = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "config.yaml");
         var yamlConfig = deserializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(filePath));
 
-
         // Access the value
         string GptApiKey = yamlConfig["key"];
-
         string result = string.Empty;
 
         try
