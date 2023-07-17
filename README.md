@@ -1,10 +1,17 @@
 # QuizMaker
 
-# Lokale Datenbank anlegen
+### !! WICHTIG: Die Screenshots sind nicht mehr aktuell. Datenbankname ist nun **Database** NICHT Questions !!
 
-Hier inst in Screenshots festgehalten wei man die lokale Datenbank anlegt, damit das Programm Daten schreiben und entfernen kann:
+## Lokale Datenbank anlegen
+
+
+Hier inst in Screenshots festgehalten wie man die lokale Datenbank anlegt, damit das Programm Daten schreiben und entfernen kann:
 
 ![2023-07-06 14_27_20-](https://github.com/bluuo/QuizMaker/blob/117e5d6cebd0369387eba289968238f3a3050b11/misc/2023-07-06%2014_27_20-.png)
+
+
+
+Datenbankname ist nun **Database.mdf** NICHT Questions.mdf:
 
 ![2023-07-06 14_28_37-Window](https://github.com/bluuo/QuizMaker/blob/117e5d6cebd0369387eba289968238f3a3050b11/misc/2023-07-06%2014_28_37-Window.png)
 
@@ -35,13 +42,15 @@ CREATE TABLE [dbo].[QuestionsTable] (
 Zweite Tabelle:
 ```
 CREATE TABLE [dbo].[QuizzesTable] (
-    [Id]       INT  NOT NULL,
+    [Id]       INT  IDENTITY (1, 1) NOT NULL,
     [name]     TEXT NULL,
     [category] TEXT NULL,
     [size]     INT  NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 ```
+
+
 
 ![2023-07-06 14_32_44-Window](https://github.com/bluuo/QuizMaker/blob/117e5d6cebd0369387eba289968238f3a3050b11/misc/2023-07-06%2014_32_44-Window.png)
 

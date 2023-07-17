@@ -33,12 +33,6 @@ namespace QuizMaker.Screens
                  Accent.LightBlue700,
                  TextShade.WHITE);
         }
-        private void QuestionBox_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-
         private void materialListBox1_SelectedIndexChanged(object sender, MaterialListBoxItem selectedItem)
         {
 
@@ -64,16 +58,20 @@ namespace QuizMaker.Screens
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-
-            Quiz quiz = new Quiz()
+            if (String.IsNullOrEmpty(TextboxAnzahl.Text)  || String.IsNullOrEmpty(TextboxKategorie.Text) || String.IsNullOrEmpty(TextboxName.Text) )//no selection
+                MessageBox.Show("Bitte alle Felder ausfüllen");
+            else
             {
-                Size = Int32.Parse(TextboxAnzahl.Text),
-                Category = TextboxKategorie.Text,
-                Name = TextboxName.Text
-            };
+                Quiz quiz = new Quiz()
+                {
+                    Size = Int32.Parse(TextboxAnzahl.Text),
+                    Category = TextboxKategorie.Text,
+                    Name = TextboxName.Text
+                };
 
-            DAO.GetInstance().insertQuiz(quiz);
-            updateQuestionListbox();
+                DAO.GetInstance().insertQuiz(quiz);
+                updateQuestionListbox();
+            }
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
@@ -88,6 +86,37 @@ namespace QuizMaker.Screens
                 GameControler gameControler = new GameControler(Int32.Parse(match.Value));
                 gameControler.startQuiz();
             };
+        }
+
+        private void ButtonDelete_Click(object sender, EventArgs e)
+        {
+            if (QuizBox.SelectedIndex == -1) //no selection
+                MessageBox.Show("Bitte wähle ein Quiz aus");
+            else
+            {
+                Regex regex = new Regex(@"^\d+");
+                Match match = regex.Match(QuizBox.SelectedItem.Text.ToString());
+
+                DAO.GetInstance().deleteQuiz(int.Parse(match.Value));
+                updateQuestionListbox();
+            };
+
+        }
+
+        private void ButtonBack_Click(object sender, EventArgs e)
+        {
+            MainForm.GetInstance().showMenu();
+            this.Visible = false;
+        }
+
+        private void QuizBox_MouseDoubleClick_1(object sender, MouseEventArgs e)
+        {
+            Regex regex = new Regex(@"^\d+");
+            Match match = regex.Match(QuizBox.SelectedItem.Text.ToString());
+
+            GameControler gameControler = new GameControler(Int32.Parse(match.Value));
+            gameControler.startQuiz();
+
         }
     }
 }
