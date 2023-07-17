@@ -58,7 +58,7 @@ namespace QuizMaker.Screens
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            if (TextboxAnzahl.Text != null || TextboxKategorie.Text != null || TextboxName != null) //no selection
+            if (String.IsNullOrEmpty(TextboxAnzahl.Text)  || String.IsNullOrEmpty(TextboxKategorie.Text) || String.IsNullOrEmpty(TextboxName.Text) )//no selection
                 MessageBox.Show("Bitte alle Felder ausfüllen");
             else
             {
