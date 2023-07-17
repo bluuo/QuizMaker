@@ -16,9 +16,9 @@ using static QuizMaker.DAO;
 
 namespace QuizMaker.Screens
 {
-    public partial class PrePlayQuiz : MaterialForm
+    public partial class QuizManager : MaterialForm
     {
-        public PrePlayQuiz()
+        public QuizManager()
         {
 
             InitializeComponent();

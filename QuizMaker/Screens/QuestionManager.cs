@@ -2,6 +2,7 @@
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using static QuizMaker.DAO;
@@ -18,7 +19,6 @@ namespace QuizMaker.Screens
         //private static string absolutePath = Path.GetFullPath(relativePath);
         //private string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={absolutePath};Integrated Security=True";
 
-
         public QuestionManager()
         {
             InitializeComponent();
@@ -32,6 +32,8 @@ namespace QuizMaker.Screens
                  Primary.Grey500,
                  Accent.LightBlue700,
                  TextShade.WHITE);
+
+            TextboxQuestion.Font = new Font("Microsoft Sans Serif", 17);
 
         }
 

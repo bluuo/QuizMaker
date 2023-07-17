@@ -60,7 +60,7 @@ namespace QuizMaker.Screens
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(331, 128);
+            this.materialLabel1.Location = new System.Drawing.Point(331, 90);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(41, 19);
@@ -73,7 +73,7 @@ namespace QuizMaker.Screens
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(335, 230);
+            this.materialLabel2.Location = new System.Drawing.Point(335, 192);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(117, 19);
@@ -86,7 +86,7 @@ namespace QuizMaker.Screens
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(336, 287);
+            this.materialLabel3.Location = new System.Drawing.Point(336, 249);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(115, 19);
@@ -99,7 +99,7 @@ namespace QuizMaker.Screens
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(335, 345);
+            this.materialLabel4.Location = new System.Drawing.Point(335, 307);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(115, 19);
@@ -112,7 +112,7 @@ namespace QuizMaker.Screens
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(335, 403);
+            this.materialLabel5.Location = new System.Drawing.Point(335, 365);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(115, 19);
@@ -121,14 +121,14 @@ namespace QuizMaker.Screens
             // 
             // ButtonLöschen
             // 
-            this.ButtonLöschen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonLöschen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ButtonLöschen.AutoSize = false;
             this.ButtonLöschen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonLöschen.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.ButtonLöschen.Depth = 0;
             this.ButtonLöschen.HighEmphasis = true;
             this.ButtonLöschen.Icon = null;
-            this.ButtonLöschen.Location = new System.Drawing.Point(70, 607);
+            this.ButtonLöschen.Location = new System.Drawing.Point(68, 552);
             this.ButtonLöschen.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonLöschen.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonLöschen.Name = "ButtonLöschen";
@@ -143,14 +143,14 @@ namespace QuizMaker.Screens
             // 
             // ButtonAddQuestion
             // 
-            this.ButtonAddQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonAddQuestion.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ButtonAddQuestion.AutoSize = false;
             this.ButtonAddQuestion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonAddQuestion.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.ButtonAddQuestion.Depth = 0;
             this.ButtonAddQuestion.HighEmphasis = true;
             this.ButtonAddQuestion.Icon = null;
-            this.ButtonAddQuestion.Location = new System.Drawing.Point(474, 607);
+            this.ButtonAddQuestion.Location = new System.Drawing.Point(478, 552);
             this.ButtonAddQuestion.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonAddQuestion.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonAddQuestion.Name = "ButtonAddQuestion";
@@ -169,7 +169,7 @@ namespace QuizMaker.Screens
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(335, 460);
+            this.materialLabel6.Location = new System.Drawing.Point(335, 422);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(68, 19);
@@ -184,7 +184,7 @@ namespace QuizMaker.Screens
             this.TextboxCorrect.Depth = 0;
             this.TextboxCorrect.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxCorrect.LeadingIcon = null;
-            this.TextboxCorrect.Location = new System.Drawing.Point(335, 246);
+            this.TextboxCorrect.Location = new System.Drawing.Point(335, 208);
             this.TextboxCorrect.Margin = new System.Windows.Forms.Padding(1);
             this.TextboxCorrect.MaxLength = 50;
             this.TextboxCorrect.MouseState = MaterialSkin.MouseState.OUT;
@@ -203,7 +203,7 @@ namespace QuizMaker.Screens
             this.TextboxWrong1.Depth = 0;
             this.TextboxWrong1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxWrong1.LeadingIcon = null;
-            this.TextboxWrong1.Location = new System.Drawing.Point(335, 304);
+            this.TextboxWrong1.Location = new System.Drawing.Point(335, 266);
             this.TextboxWrong1.Margin = new System.Windows.Forms.Padding(1);
             this.TextboxWrong1.MaxLength = 50;
             this.TextboxWrong1.MouseState = MaterialSkin.MouseState.OUT;
@@ -222,7 +222,7 @@ namespace QuizMaker.Screens
             this.TextboxWrong2.Depth = 0;
             this.TextboxWrong2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxWrong2.LeadingIcon = null;
-            this.TextboxWrong2.Location = new System.Drawing.Point(335, 361);
+            this.TextboxWrong2.Location = new System.Drawing.Point(335, 323);
             this.TextboxWrong2.Margin = new System.Windows.Forms.Padding(1);
             this.TextboxWrong2.MaxLength = 50;
             this.TextboxWrong2.MouseState = MaterialSkin.MouseState.OUT;
@@ -241,7 +241,7 @@ namespace QuizMaker.Screens
             this.TextboxWrong3.Depth = 0;
             this.TextboxWrong3.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxWrong3.LeadingIcon = null;
-            this.TextboxWrong3.Location = new System.Drawing.Point(335, 419);
+            this.TextboxWrong3.Location = new System.Drawing.Point(335, 381);
             this.TextboxWrong3.Margin = new System.Windows.Forms.Padding(1);
             this.TextboxWrong3.MaxLength = 50;
             this.TextboxWrong3.MouseState = MaterialSkin.MouseState.OUT;
@@ -254,8 +254,7 @@ namespace QuizMaker.Screens
             // 
             // materialLabel7
             // 
-            this.materialLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
@@ -269,14 +268,14 @@ namespace QuizMaker.Screens
             // 
             // materialButton3
             // 
-            this.materialButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.materialButton3.AutoSize = false;
             this.materialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.materialButton3.Depth = 0;
             this.materialButton3.HighEmphasis = true;
             this.materialButton3.Icon = null;
-            this.materialButton3.Location = new System.Drawing.Point(29, 21);
+            this.materialButton3.Location = new System.Drawing.Point(25, 9);
             this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton3.Name = "materialButton3";
@@ -298,13 +297,13 @@ namespace QuizMaker.Screens
             this.QuestionBox.BorderColor = System.Drawing.Color.LightGray;
             this.QuestionBox.Depth = 0;
             this.QuestionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.QuestionBox.Location = new System.Drawing.Point(25, 129);
+            this.QuestionBox.Location = new System.Drawing.Point(25, 91);
             this.QuestionBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.QuestionBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.QuestionBox.Name = "QuestionBox";
             this.QuestionBox.SelectedIndex = -1;
             this.QuestionBox.SelectedItem = null;
-            this.QuestionBox.Size = new System.Drawing.Size(301, 463);
+            this.QuestionBox.Size = new System.Drawing.Size(301, 447);
             this.QuestionBox.TabIndex = 25;
             this.QuestionBox.SelectedIndexChanged += new MaterialSkin.Controls.MaterialListBox.SelectedIndexChangedEventHandler(this.QuestionBox_SelectedIndexChanged);
             this.QuestionBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.QuestionBox_MouseDoubleClick);
@@ -317,7 +316,7 @@ namespace QuizMaker.Screens
             this.TextboxCategory.Depth = 0;
             this.TextboxCategory.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.TextboxCategory.LeadingIcon = null;
-            this.TextboxCategory.Location = new System.Drawing.Point(335, 478);
+            this.TextboxCategory.Location = new System.Drawing.Point(335, 440);
             this.TextboxCategory.Margin = new System.Windows.Forms.Padding(1);
             this.TextboxCategory.MaxLength = 50;
             this.TextboxCategory.MouseState = MaterialSkin.MouseState.OUT;
@@ -330,13 +329,13 @@ namespace QuizMaker.Screens
             // 
             // ButtonGenerate
             // 
-            this.ButtonGenerate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonGenerate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ButtonGenerate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonGenerate.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.ButtonGenerate.Depth = 0;
             this.ButtonGenerate.HighEmphasis = true;
             this.ButtonGenerate.Icon = null;
-            this.ButtonGenerate.Location = new System.Drawing.Point(123, 85);
+            this.ButtonGenerate.Location = new System.Drawing.Point(123, 47);
             this.ButtonGenerate.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.ButtonGenerate.MouseState = MaterialSkin.MouseState.HOVER;
             this.ButtonGenerate.Name = "ButtonGenerate";
@@ -354,7 +353,7 @@ namespace QuizMaker.Screens
             this.TextboxQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TextboxQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.TextboxQuestion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextboxQuestion.Location = new System.Drawing.Point(331, 146);
+            this.TextboxQuestion.Location = new System.Drawing.Point(331, 108);
             this.TextboxQuestion.Multiline = true;
             this.TextboxQuestion.Name = "TextboxQuestion";
             this.TextboxQuestion.Size = new System.Drawing.Size(467, 50);
@@ -366,7 +365,7 @@ namespace QuizMaker.Screens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 683);
+            this.ClientSize = new System.Drawing.Size(821, 607);
             this.ControlBox = false;
             this.Controls.Add(this.TextboxQuestion);
             this.Controls.Add(this.ButtonGenerate);

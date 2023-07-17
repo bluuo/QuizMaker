@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace QuizMaker.Screens
 {
-    partial class PrePlayQuiz
+    partial class QuizManager
     {
         /// <summary>
         /// Required designer variable.

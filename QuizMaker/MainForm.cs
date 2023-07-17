@@ -83,7 +83,7 @@ namespace QuizMaker
         public void showPrePlayQuiz()
         {
             //toDO
-            Screens.PrePlayQuiz prePlayQuiz = new Screens.PrePlayQuiz();
+            Screens.QuizManager prePlayQuiz = new Screens.QuizManager();
             prePlayQuiz.TopLevel = false;
             prePlayQuiz.Dock = DockStyle.Fill;
             prePlayQuiz.FormBorderStyle = FormBorderStyle.None;

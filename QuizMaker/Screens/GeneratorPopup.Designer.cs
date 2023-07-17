@@ -134,7 +134,6 @@
             this.LevelSlider.MouseState = MaterialSkin.MouseState.HOVER;
             this.LevelSlider.Name = "LevelSlider";
             this.LevelSlider.RangeMax = 5;
-            this.LevelSlider.RangeMin = 1;
             this.LevelSlider.ShowText = false;
             this.LevelSlider.Size = new System.Drawing.Size(325, 40);
             this.LevelSlider.TabIndex = 5;

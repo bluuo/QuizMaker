@@ -137,11 +137,11 @@
     <Compile Include="Screens\GeneratorPopup.Designer.cs">
       <DependentUpon>GeneratorPopup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\PrePlayQuiz.cs">
+    <Compile Include="Screens\QuizManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\PrePlayQuiz.Designer.cs">
-      <DependentUpon>PrePlayQuiz.cs</DependentUpon>
+    <Compile Include="Screens\QuizManager.Designer.cs">
+      <DependentUpon>QuizManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\QuestionManager.cs">
       <SubType>Form</SubType>
@@ -172,8 +172,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\PrePlayQuiz.resx">
-      <DependentUpon>PrePlayQuiz.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\QuizManager.resx">
+      <DependentUpon>QuizManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\GeneratorPopup.resx">
       <DependentUpon>GeneratorPopup.cs</DependentUpon>
